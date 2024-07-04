@@ -1,10 +1,10 @@
-// core/src/main/scala/GraphExample.scala
 import zio.json.*
 
 import java.nio.file.{Files, Paths}
 import java.nio.charset.StandardCharsets
 import scala.annotation.tailrec
 import scala.collection.mutable
+import scala.util.boundary.break
 
 // Définir le trait de base pour les graphes
 trait Graph[V, E] {
@@ -81,35 +81,7 @@ case class WeightedGraph[V](vertices: Set[V], edges: Set[WeightedEdge[V]]) exten
   }
 }
 
-object GraphExample extends App {
-  val node1 = Node(1)
-  val node2 = Node(2)
-  val node3 = Node(3)
-
-  // Créer un graphe bidirectionnel
-  var bidirectionalGraph = BidirectionalGraph(Set())
-  bidirectionalGraph = addBidirectionalEdge(bidirectionalGraph, BidirectionalEdge(node1, node2))
-  bidirectionalGraph = addBidirectionalEdge(bidirectionalGraph, BidirectionalEdge(node2, node3))
-
-  // Créer un graphe dirigé
-  var directedGraph = DirectedGraph(Set())
-  directedGraph = addDirectedEdge(directedGraph, DirectedEdge(node1, node2))
-  directedGraph = addDirectedEdge(directedGraph, DirectedEdge(node2, node3))
-
-  // Créer un graphe pondéré
-  var weightedGraph = WeightedGraph(Set())
-  weightedGraph = addWeightedEdge(weightedGraph, WeightedEdge(node1, node2, 1.5))
-  weightedGraph = addWeightedEdge(weightedGraph, WeightedEdge(node2, node3, 2.5))
-
-  // Calculer le poids d'un parcours
-  val pathWeight = calculatePathWeight(weightedGraph, List(node1, node2, node3))
-  println(s"\nWeight of the path from node1 to node3: $pathWeight\n")
-
-}
-
-
 @main
 def main(): Unit = {
-  println("\nHello, world!")
-  GraphExample.main(Array())
+  println("Hello world!")
 }
