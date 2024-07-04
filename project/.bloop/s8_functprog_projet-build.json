@@ -213,7 +213,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "C:\\Program Files\\Java\\jdk-18.0.2.1",
+                "home": "C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot",
                 "options": [
                     "-Duser.dir=C:\\Arthur\\Efrei Paris\\M1\\S8\\Functional Programming\\Project\\S8_FunctProg_Projet\\project"
                 ]
@@ -222,7 +222,7 @@
                 
             ],
             "runtimeConfig": {
-                "home": "C:\\Program Files\\Java\\jdk-18.0.2.1",
+                "home": "C:\\Program Files\\Microsoft\\jdk-11.0.16.101-hotspot",
                 "options": [
                     "-Duser.dir=C:\\Arthur\\Efrei Paris\\M1\\S8\\Functional Programming\\Project\\S8_FunctProg_Projet\\project"
                 ]
