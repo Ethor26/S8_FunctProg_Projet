@@ -1,12 +1,10 @@
 # Functional Programming in Scala 3 - Functional Graphs
-
 Welcome to the final project for your Functional Programming in Scala 3 class. This project is designed to assess your
 understanding and application of functional programming principles. The grading will be based on the proper behavior of
 the implementation, adherence to functional programming principles, test coverage, project organization, and the quality
 and completeness of the documentation.
 
 **Project Deadline: Friday, 19 July**
-
 ## Project Overview
 
 You will design and implement a graph data structure library with various operations, integrate it into a ZIO 2
@@ -27,12 +25,6 @@ Ensure all the implemented data structures and operations implemented below work
 
 - **Task**: Implement unit tests to ensure the correctness of the above implementatio# Functional Programming in Scala 3 - Functional Graphs
 
-Welcome to the final project for your Functional Programming in Scala 3 class. This project is designed to assess your
-understanding and application of functional programming principles. The grading will be based on the proper behavior of
-the implementation, adherence to functional programming principles, test coverage, project organization, and the quality
-and completeness of the documentation.
-
-**Project Deadline: Friday, 19 July**
 
 ## Project Overview
 

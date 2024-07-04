@@ -6,6 +6,7 @@ import scala.annotation.tailrec
 import scala.collection.mutable
 import scala.util.boundary.break
 
+/*
 // Définir le trait de base pour les graphes
 trait Graph[V, E] {
   def vertices: Set[V]
@@ -84,4 +85,12 @@ case class WeightedGraph[V](vertices: Set[V], edges: Set[WeightedEdge[V]]) exten
 @main
 def main(): Unit = {
   println("Hello world!")
+  val graph = UndirectedGraph(Set(1, 2, 3), Set(UndirectedEdge(1, 2), UndirectedEdge(2, 3)))
+  println(graph.neighbors(1))
+  val graph2 = graph.addEdge(UndirectedEdge(1, 3))
+  println(graph2.neighbors(1))
+  val weightedGraph = WeightedGraph(Set(1, 2, 3), Set(WeightedEdge(1, 2, 1.0), WeightedEdge(2, 3, 2.0)))
+  println(weightedGraph.pathWeight(List(1, 2, 3)))
+
 }
+*/
