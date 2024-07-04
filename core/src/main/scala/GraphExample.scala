@@ -1,10 +1,10 @@
+// core/src/main/scala/GraphExample.scala
 import zio.json.*
 
 import java.nio.file.{Files, Paths}
 import java.nio.charset.StandardCharsets
 import scala.annotation.tailrec
 import scala.collection.mutable
-import scala.util.boundary.break
 
 // Noeud du graphe
 case class Node(id: Int)
@@ -266,12 +266,12 @@ object GraphExample extends App {
 
   // Calculer le poids d'un parcours
   val pathWeight = calculatePathWeight(weightedGraph, List(node1, node2, node3))
-  println(s"Weight of the path from node1 to node3: $pathWeight")
+  println(s"\nWeight of the path from node1 to node3: $pathWeight\n")
+
 }
-
-
 
 @main
 def main(): Unit = {
-  println("Hello world!")
+  println("\nHello, world!")
+  GraphExample.main(Array())
 }
