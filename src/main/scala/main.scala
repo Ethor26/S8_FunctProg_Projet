@@ -154,6 +154,80 @@ def bfs(graph: Graph, start: Node): Set[Node] = {
   bfsRecursive(List(start), Set.empty[Node])
 }
 
+
+// Tri topologique pour un graphe dirigé
+def topologicalSort(graph: DirectedGraph): Either[String, List[Node]] = {
+  val visited = mutable.Set.empty[Node]
+  val tempMarked = mutable.Set.empty[Node]
+  val sortedList = mutable.ListBuffer.empty[Node]
+
+  def visit(node: Node): Either[String, Unit] = {
+    if (tempMarked.contains(node)) {
+      Left("Graph has a cycle, topological sort not possible.")
+    } else if (!visited.contains(node)) {
+      tempMarked.add(node)
+      val result = for {
+        _ <- neighbors(graph, node).foldLeft[Either[String, Unit]](Right(())) {
+          (acc, neighbor) => acc.flatMap(_ => visit(neighbor))
+        }
+      } yield ()
+      result match {
+        case Left(error) => Left(error)
+        case Right(_) =>
+          tempMarked.remove(node)
+          visited.add(node)
+          sortedList.prepend(node)
+          Right(())
+      }
+    } else {
+      Right(())
+    }
+  }
+
+  val nodes = graph.edges.flatMap(edge => List(edge.from, edge.to)).toSet
+  val result = nodes.foldLeft[Either[String, Unit]](Right(())) {
+    (acc, node) => acc.flatMap(_ => if (!visited.contains(node)) visit(node) else Right(()))
+  }
+
+  result.map(_ => sortedList.toList)
+}
+
+// Fonction récursive de détection de cycles pour un graphe dirigé
+def detectCycle(graph: DirectedGraph): Either[String, List[Node]] = {
+  val visited = mutable.Set.empty[Node]
+  val stack = mutable.Set.empty[Node]
+
+  def visit(node: Node, path: List[Node]): Either[String, Unit] = {
+    if (stack.contains(node)) {
+      Left(s"Cycle detected: ${path.reverse.mkString(" -> ")} -> $node")
+    } else if (!visited.contains(node)) {
+      stack.add(node)
+      visited.add(node)
+      val result = for {
+        _ <- neighbors(graph, node).foldLeft[Either[String, Unit]](Right(())) {
+          (acc, neighbor) => acc.flatMap(_ => visit(neighbor, node :: path))
+        }
+      } yield ()
+      result match {
+        case Left(error) => Left(error)
+        case Right(_) =>
+          stack.remove(node)
+          Right(())
+      }
+    } else {
+      Right(())
+    }
+  }
+
+  val nodes = graph.edges.flatMap(edge => List(edge.from, edge.to)).toSet
+  val result = nodes.foldLeft[Either[String, Unit]](Right(())) {
+    (acc, node) => acc.flatMap(_ => if (!visited.contains(node)) visit(node, List(node)) else Right(()))
+  }
+
+  result.map(_ => Nil) // Right("No cycles detected")
+}
+
+/*
 // Tri topologique pour un graphe dirigé
 def topologicalSort(graph: DirectedGraph): Either[String, List[Node]] = {
   val visited = mutable.Set.empty[Node]
@@ -200,6 +274,7 @@ def topologicalSort(graph: DirectedGraph): Either[String, List[Node]] = {
   Right(sortedList.toList)
 }
 
+
 // Fonction récursive de détection de cycles pour un graphe dirigé
 def detectCycle(graph: DirectedGraph): Either[String, List[Node]] = {
   val visited = mutable.Set.empty[Node]
@@ -242,7 +317,7 @@ def detectCycle(graph: DirectedGraph): Either[String, List[Node]] = {
   }
   Right(Nil) //   Right("No cycles detected")
 
-}
+} */
 
 object GraphExample extends App {
   val node1 = Node(1)
