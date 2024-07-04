@@ -1,3 +1,4 @@
-[debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/C:/Users/ethan/OneDrive%20-%20Efrei/M1-S2/FUNCTIONNAL_PROGRAMMING/S8_FunctProg_Projet/"), "root")...
-[debug] Done updating ProjectRef(uri("file:/C:/Users/ethan/OneDrive%20-%20Efrei/M1-S2/FUNCTIONNAL_PROGRAMMING/S8_FunctProg_Projet/"), "root")
+[warn] scala3-library_3-3.3.3-sources.jar no longer exists at C:\Users\ethan\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_3\3.3.3\scala3-library_3-3.3.3-sources.jar
+[debug] not up to date. inChanged = false, force = false
+[debug] Updating ProjectRef(uri("file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/"), "root")...
+[debug] Done updating ProjectRef(uri("file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/"), "root")
