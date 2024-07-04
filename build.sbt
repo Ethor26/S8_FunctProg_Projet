@@ -4,7 +4,8 @@ ThisBuild / scalaVersion := "3.3.3"
 lazy val root = (project in file("."))
   .aggregate(core, app)
   .settings(
-    name := "S8_FunctProg_Projet"
+    name := "S8_FunctProg_Projet",
+    addCommandAlias("run", "core/run")
   )
 
 lazy val core = (project in file("core"))
