@@ -13,14 +13,13 @@ abstract class Graph[V] {
   def neighbors(vertex: V): Set[V]
   protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): Graph[V]
 
-
   // Valider les arêtes
   def validateEdges(edges: Set[Edge[V]]): Set[Edge[V]] = {
     edges.map { edge =>
       if (!weighted && !edge.weight.isNaN && edge.weight != 1.0)
         throw new IllegalArgumentException(s"Invalid edge weight for a non-weighted graph: $edge")
       else if (weighted && edge.weight.isNaN) {
-        println(s"Warning: Edge (${edge.from}, ${edge.to}) is missing weight. Assigning default weight 1.");
+        println(s"Warning: Edge (${edge.from}, ${edge.to}) is missing weight. Assigning default weight 1.")
         edge.copy(weight = 1.0)
       } else
         edge
@@ -229,16 +228,16 @@ case class DirectedGraph[V](vertices: Set[V], private val initialEdges: Set[Edge
 @main
 def main(): Unit = {
   println("Hello world!")
-  val graph = UndirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
-  println("--- graph.neighbors(1): " + graph.neighbors(1))
-  val graph2 = graph.addEdge(Edge(1, 3))
-  println("--- graph.neighbors(1) + Edge(1, 3): " + graph2.neighbors(1))
+  var undirected_unweighted_graph = UndirectedGraph[Int](Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
+  println("--- undirected_unweighted_graph.neighbors(1): " + undirected_unweighted_graph.neighbors(1))
+  undirected_unweighted_graph = undirected_unweighted_graph.addEdge(Edge(1, 3)).asInstanceOf[UndirectedGraph[Int]]
+  println("--- undirected_unweighted_graph.neighbors(1) + Edge(1, 3): " + undirected_unweighted_graph.neighbors(1))
   val weightedGraph = UndirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3, 2.0)), weighted = true)
   println("--- weightedGraph.dijkstra(1): " + weightedGraph.dijkstra(1))
 
   // Tests des algorithmes
-  println("--- graph.dfs(1): " + graph.dfs(1))
-  println("--- graph.bfs(1): " + graph.bfs(1))
+  println("--- undirected_unweighted_graph.dfs(1): " + undirected_unweighted_graph.dfs(1))
+  println("--- undirected_unweighted_graph.bfs(1): " + undirected_unweighted_graph.bfs(1))
   val directedGraph = DirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
   println("--- directedGraph.topologicalSort: " + directedGraph.topologicalSort)
   println("--- directedGraph.detectCycle: " + directedGraph.detectCycle)
