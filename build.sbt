@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
 lazy val core = (project in file("core"))
   .settings(
     name := "core",
-    Compile / mainClass := Some("GraphExample"),
+    Compile / mainClass := Some("Graph_manager"),
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "3.2.14" % Test,
       "dev.zio" %% "zio" % "2.0.0",
