@@ -24,6 +24,7 @@ lazy val app = (project in file("app"))
   .settings(
     name := "app",
     libraryDependencies ++= Seq(
-      "dev.zio" %% "zio" % "2.1.6"
+      "dev.zio" %% "zio" % "2.1.6",
+      "dev.zio" %% "zio-json" % "0.6.2"
     )
   )
