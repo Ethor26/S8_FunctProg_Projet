@@ -1,3 +1,5 @@
+// core/src/main/scala/Graph_manager.scala
+
 import zio.json.*
 // import java.nio.file.{Files, Paths}
 // import java.nio.charset.StandardCharsets
@@ -5,7 +7,7 @@ import zio.json.*
 import scala.collection.mutable
 
 // Définir la classe abstraite de base pour les graphes
-abstract class Graph_manager[V] {
+abstract class Graph[V] {
   def vertices: Set[V]
   def edges: Set[Edge[V]]
   def weighted: Boolean
@@ -225,21 +227,23 @@ case class DirectedGraph[V](vertices: Set[V], private val initialEdges: Set[Edge
   }
 }
 
-@main
-def main(): Unit = {
-  println("Hello world!")
-  var undirected_unweighted_graph = UndirectedGraph[Int](Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
-  println("--- undirected_unweighted_graph.neighbors(1): " + undirected_unweighted_graph.neighbors(1))
-  undirected_unweighted_graph = undirected_unweighted_graph.addEdge(Edge(1, 3)).asInstanceOf[UndirectedGraph[Int]]
-  println("--- undirected_unweighted_graph.neighbors(1) + Edge(1, 3): " + undirected_unweighted_graph.neighbors(1))
-  val weightedGraph = UndirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3, 2.0)), weighted = true)
-  println("--- weightedGraph.dijkstra(1): " + weightedGraph.dijkstra(1))
+object Graph_manager {
+  @main
+  def main(): Unit = {
+    println("Hello world!")
+    var undirected_unweighted_graph = UndirectedGraph[Int](Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
+    println("--- undirected_unweighted_graph.neighbors(1): " + undirected_unweighted_graph.neighbors(1))
+    undirected_unweighted_graph = undirected_unweighted_graph.addEdge(Edge(1, 3)).asInstanceOf[UndirectedGraph[Int]]
+    println("--- undirected_unweighted_graph.neighbors(1) + Edge(1, 3): " + undirected_unweighted_graph.neighbors(1))
+    val weightedGraph = UndirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3, 2.0)), weighted = true)
+    println("--- weightedGraph.dijkstra(1): " + weightedGraph.dijkstra(1))
 
-  // Tests des algorithmes
-  println("--- undirected_unweighted_graph.dfs(1): " + undirected_unweighted_graph.dfs(1))
-  println("--- undirected_unweighted_graph.bfs(1): " + undirected_unweighted_graph.bfs(1))
-  val directedGraph = DirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
-  println("--- directedGraph.topologicalSort: " + directedGraph.topologicalSort)
-  println("--- directedGraph.detectCycle: " + directedGraph.detectCycle)
-  println("--- weightedGraph.floydWarshall(): " + weightedGraph.floydWarshall())
+    // Tests des algorithmes
+    println("--- undirected_unweighted_graph.dfs(1): " + undirected_unweighted_graph.dfs(1))
+    println("--- undirected_unweighted_graph.bfs(1): " + undirected_unweighted_graph.bfs(1))
+    val directedGraph = DirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
+    println("--- directedGraph.topologicalSort: " + directedGraph.topologicalSort)
+    println("--- directedGraph.detectCycle: " + directedGraph.detectCycle)
+    println("--- weightedGraph.floydWarshall(): " + weightedGraph.floydWarshall())
+  }
 }
