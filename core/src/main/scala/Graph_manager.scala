@@ -1,5 +1,3 @@
-package scalaproject.core
-
 import zio.json.*
 import scala.collection.mutable
 
@@ -9,7 +7,7 @@ abstract class Graph[V](val weighted: Boolean) {
   def edges: Set[Edge[V]]
 
   def neighbors(vertex: V): Set[V]
-  protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): G
+  protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): Graph[V]
 
   // Valider les arêtes
   def validateEdges(edges: Set[Edge[V]]): Set[Edge[V]] = {
@@ -24,22 +22,22 @@ abstract class Graph[V](val weighted: Boolean) {
     }
   }
 
-  def addEdge(edge: Edge[V]): G = {
+  def addEdge(edge: Edge[V]): Graph[V] = {
     val validatedEdges = validateEdges(Set(edge))
     copyWith(edges ++ validatedEdges, vertices ++ Set(edge.from, edge.to))
   }
 
-  def addEdges(newEdges: Set[Edge[V]]): G = {
+  def addEdges(newEdges: Set[Edge[V]]): Graph[V] = {
     val validatedEdges = validateEdges(newEdges)
     val newVertices = validatedEdges.flatMap(e => Set(e.from, e.to))
     copyWith(edges ++ validatedEdges, vertices ++ newVertices)
   }
 
-  def removeEdge(edge: Edge[V]): G = {
+  def removeEdge(edge: Edge[V]): Graph[V] = {
     copyWith(edges - edge, vertices -- Set(edge.from, edge.to).filter(v => edges.exists(e => e.from == v || e.to == v)))
   }
 
-  def removeEdges(oldEdges: Set[Edge[V]]): G = {
+  def removeEdges(oldEdges: Set[Edge[V]]): Graph[V] = {
     val oldVertices = oldEdges.flatMap(e => Set(e.from, e.to))
     copyWith(edges -- oldEdges, vertices -- oldVertices.filter(v => edges.exists(e => e.from == v || e.to == v)))
   }
@@ -138,13 +136,16 @@ abstract class Graph[V](val weighted: Boolean) {
   }
 }
 
+// Définir la classe pour les arêtes
+case class Edge[V](from: V, to: V, weight: Double = Double.NaN)
+
 // Implémentation d'un graphe non directionnel
 case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
   override val vertices: Set[V] = initialVertices
   override val edges: Set[Edge[V]] = validateEdges(initialEdges)
 
-  override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): UndirectedG[V] = {
-    UndirectedG(vertices, edges, weighted)
+  override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): UndirectedGraph[V] = {
+    UndirectedGraph(vertices, edges, weighted)
   }
 
   def neighbors(vertex: V): Set[V] = edges.collect {
