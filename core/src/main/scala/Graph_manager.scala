@@ -5,7 +5,7 @@ import zio.json.*
 import scala.collection.mutable
 
 // Définir la classe abstraite de base pour les graphes
-abstract class Graph[V] {
+abstract class Graph_manager[V] {
   def vertices: Set[V]
   def edges: Set[Edge[V]]
   def weighted: Boolean
