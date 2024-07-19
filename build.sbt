@@ -14,7 +14,6 @@ lazy val core = (project in file("core"))
     Compile / mainClass := Some("Graph_manager"),
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "3.2.14" % Test,
-      "dev.zio" %% "zio" % "2.0.12",
       "dev.zio" %% "zio-json" % "0.6.2"
     )
   )
@@ -24,6 +23,6 @@ lazy val app = (project in file("app"))
   .settings(
     name := "app",
     libraryDependencies ++= Seq(
-      "dev.zio" %% "zio" % "2.0.12"
+      "dev.zio" %% "zio" % "2.1.5"
     )
   )

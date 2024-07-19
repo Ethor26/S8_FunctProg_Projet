@@ -3637,3 +3637,936 @@ java.nio.file.FileSystemNotFoundException: Provider "git" not installed
 2024.07.19 18:53:07 INFO  time: compiled core in 0.23s
 2024.07.19 18:56:01 INFO  compiling core (2 scala sources)
 2024.07.19 18:56:04 INFO  time: compiled core in 2.49s
+2024.07.19 18:57:16 INFO  compiling app (1 scala source)
+2024.07.19 18:57:16 INFO  time: compiled app in 0.63s
+2024.07.19 18:57:19 INFO  compiling app (1 scala source)
+2024.07.19 18:57:19 INFO  time: compiled app in 0.51s
+2024.07.19 18:57:21 INFO  compiling app (1 scala source)
+2024.07.19 18:57:21 INFO  time: compiled app in 0.1s
+2024.07.19 18:57:24 WARN  Using indexes to guess the definition of Graph_manager
+2024.07.19 18:57:24 WARN  Using indexes to guess the definition of Graph_manager
+2024.07.19 18:57:24 INFO  compiling app (1 scala source)
+2024.07.19 18:57:24 INFO  time: compiled app in 94ms
+2024.07.19 18:58:42 INFO  compiling app (1 scala source)
+2024.07.19 18:58:42 INFO  time: compiled app in 0.11s
+2024.07.19 18:58:48 INFO  compiling app (1 scala source)
+2024.07.19 18:58:48 INFO  time: compiled app in 0.13s
+2024.07.19 18:59:00 INFO  compiling app (1 scala source)
+2024.07.19 18:59:00 INFO  time: compiled app in 88ms
+2024.07.19 18:59:18 INFO  compiling core (1 scala source)
+2024.07.19 18:59:18 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 18:59:18 INFO  time: compiled core in 0.12s
+2024.07.19 18:59:21 INFO  compiling core (1 scala source)
+2024.07.19 18:59:21 INFO  time: compiled core in 0.14s
+juil. 19, 2024 6:59:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 708
+2024.07.19 18:59:44 INFO  compiling core (1 scala source)
+2024.07.19 18:59:44 INFO  time: compiled core in 0.2s
+2024.07.19 18:59:49 INFO  compiling core (2 scala sources)
+2024.07.19 18:59:49 WARN  Could not load snapshot text for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\core\src\main\scala\Graph_manager.scala
+2024.07.19 18:59:49 INFO  time: compiled core in 0.89s
+2024.07.19 18:59:54 INFO  compiling core (1 scala source)
+2024.07.19 18:59:54 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 18:59:54 INFO  time: compiled core in 99ms
+juil. 19, 2024 6:59:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 776
+2024.07.19 18:59:56 INFO  compiling core (2 scala sources)
+2024.07.19 18:59:56 INFO  time: compiled core in 0.81s
+juil. 19, 2024 7:04:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 794
+2024.07.19 19:04:29 INFO  compiling app (1 scala source)
+2024.07.19 19:04:29 INFO  time: compiled app in 0.11s
+juil. 19, 2024 7:04:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 823
+2024.07.19 19:04:39 INFO  compiling app (1 scala source)
+2024.07.19 19:04:39 INFO  time: compiled app in 0.12s
+2024.07.19 19:04:42 INFO  compiling app (1 scala source)
+2024.07.19 19:04:42 INFO  time: compiled app in 0.11s
+2024.07.19 19:04:49 INFO  compiling app (1 scala source)
+2024.07.19 19:04:49 INFO  time: compiled app in 0.1s
+2024.07.19 19:04:49 INFO  compiling app (1 scala source)
+2024.07.19 19:04:49 INFO  time: compiled app in 96ms
+juil. 19, 2024 7:04:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 872
+2024.07.19 19:04:52 INFO  compiling app (1 scala source)
+2024.07.19 19:04:52 INFO  time: compiled app in 0.12s
+2024.07.19 19:04:56 WARN  Using indexes to guess the definition of Edge
+juil. 19, 2024 7:04:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 899
+2024.07.19 19:04:58 INFO  compiling app (1 scala source)
+2024.07.19 19:04:58 INFO  time: compiled app in 0.11s
+2024.07.19 19:05:00 INFO  compiling app (1 scala source)
+2024.07.19 19:05:00 INFO  time: compiled app in 0.13s
+juil. 19, 2024 7:05:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 942
+2024.07.19 19:05:03 INFO  compiling app (1 scala source)
+2024.07.19 19:05:03 INFO  time: compiled app in 0.13s
+2024.07.19 19:05:03 INFO  compiling app (1 scala source)
+2024.07.19 19:05:03 INFO  time: compiled app in 0.14s
+juil. 19, 2024 7:05:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 968
+2024.07.19 19:05:13 INFO  compiling app (1 scala source)
+2024.07.19 19:05:13 INFO  time: compiled app in 0.14s
+juil. 19, 2024 7:05:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1006
+juil. 19, 2024 7:05:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1013
+juil. 19, 2024 7:05:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1020
+2024.07.19 19:05:52 INFO  compiling app (1 scala source)
+2024.07.19 19:05:52 INFO  time: compiled app in 0.12s
+2024.07.19 19:06:00 INFO  compiling app (1 scala source)
+2024.07.19 19:06:00 INFO  time: compiled app in 0.13s
+2024.07.19 19:06:02 INFO  compiling app (1 scala source)
+2024.07.19 19:06:02 INFO  time: compiled app in 0.12s
+juil. 19, 2024 7:06:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1084
+2024.07.19 19:06:21 INFO  compiling app (1 scala source)
+2024.07.19 19:06:21 INFO  time: compiled app in 0.54s
+2024.07.19 19:06:27 INFO  compiling app (1 scala source)
+2024.07.19 19:06:27 INFO  time: compiled app in 0.12s
+2024.07.19 19:13:46 INFO  compiling app (1 scala source)
+2024.07.19 19:13:46 INFO  time: compiled app in 0.66s
+2024.07.19 19:15:16 INFO  compiling core-test (1 scala source)
+2024.07.19 19:15:16 INFO  time: compiled core-test in 0.35s
+juil. 19, 2024 7:15:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1268
+2024.07.19 19:15:43 INFO  compiling app (1 scala source)
+2024.07.19 19:15:43 INFO  time: compiled app in 0.42s
+2024.07.19 19:15:45 INFO  compiling app (1 scala source)
+2024.07.19 19:15:45 INFO  time: compiled app in 0.69s
+2024.07.19 19:15:56 INFO  compiling app (1 scala source)
+2024.07.19 19:15:56 INFO  time: compiled app in 0.18s
+2024.07.19 19:15:56 INFO  compiling app (1 scala source)
+2024.07.19 19:15:56 INFO  time: compiled app in 0.17s
+2024.07.19 19:16:04 INFO  compiling app (1 scala source)
+2024.07.19 19:16:04 INFO  time: compiled app in 0.55s
+2024.07.19 19:16:04 INFO  compiling app (1 scala source)
+2024.07.19 19:16:05 INFO  time: compiled app in 0.57s
+2024.07.19 19:16:24 INFO  compiling app (1 scala source)
+2024.07.19 19:16:24 INFO  time: compiled app in 0.55s
+2024.07.19 19:16:25 INFO  compiling app (1 scala source)
+2024.07.19 19:16:25 INFO  time: compiled app in 0.58s
+juil. 19, 2024 7:16:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1360
+2024.07.19 19:16:37 INFO  compiling app (1 scala source)
+2024.07.19 19:16:37 INFO  time: compiled app in 0.46s
+2024.07.19 19:16:41 INFO  compiling app (1 scala source)
+2024.07.19 19:16:41 INFO  time: compiled app in 0.51s
+2024.07.19 19:17:06 INFO  compiling app (1 scala source)
+2024.07.19 19:17:06 INFO  time: compiled app in 0.64s
+2024.07.19 19:17:08 INFO  compiling app (1 scala source)
+2024.07.19 19:17:08 INFO  time: compiled app in 0.61s
+juil. 19, 2024 7:17:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1427
+2024.07.19 19:17:19 INFO  compiling app (1 scala source)
+2024.07.19 19:17:19 INFO  time: compiled app in 0.68s
+2024.07.19 19:17:29 INFO  compiling app (1 scala source)
+2024.07.19 19:17:29 INFO  time: compiled app in 0.5s
+2024.07.19 19:17:31 INFO  compiling app (1 scala source)
+2024.07.19 19:17:31 INFO  time: compiled app in 0.52s
+2024.07.19 19:17:36 INFO  compiling app (1 scala source)
+2024.07.19 19:17:36 INFO  time: compiled app in 0.54s
+2024.07.19 19:17:36 INFO  compiling app (1 scala source)
+2024.07.19 19:17:38 INFO  time: compiled app in 0.6s
+2024.07.19 19:17:47 INFO  compiling app (1 scala source)
+2024.07.19 19:17:47 INFO  time: compiled app in 0.44s
+2024.07.19 19:17:51 INFO  compiling app (1 scala source)
+2024.07.19 19:17:51 INFO  time: compiled app in 0.51s
+2024.07.19 19:18:00 INFO  compiling app (1 scala source)
+2024.07.19 19:18:00 INFO  time: compiled app in 0.51s
+2024.07.19 19:18:06 INFO  compiling app (1 scala source)
+2024.07.19 19:18:06 INFO  time: compiled app in 0.53s
+2024.07.19 19:18:10 INFO  compiling app (1 scala source)
+2024.07.19 19:18:10 INFO  time: compiled app in 0.28s
+2024.07.19 19:18:13 INFO  compiling app (1 scala source)
+2024.07.19 19:18:13 INFO  time: compiled app in 0.53s
+2024.07.19 19:18:17 INFO  compiling app (1 scala source)
+2024.07.19 19:18:17 INFO  time: compiled app in 0.17s
+2024.07.19 19:18:18 INFO  compiling app (1 scala source)
+2024.07.19 19:18:18 INFO  time: compiled app in 0.46s
+2024.07.19 19:18:26 INFO  compiling app (1 scala source)
+2024.07.19 19:18:26 INFO  time: compiled app in 0.52s
+2024.07.19 19:18:29 INFO  compiling app (1 scala source)
+2024.07.19 19:18:29 INFO  time: compiled app in 0.14s
+2024.07.19 19:18:33 INFO  compiling app (1 scala source)
+2024.07.19 19:18:33 INFO  time: compiled app in 0.65s
+2024.07.19 19:18:35 INFO  compiling app (1 scala source)
+2024.07.19 19:18:35 INFO  time: compiled app in 0.86s
+2024.07.19 19:18:40 INFO  compiling app (1 scala source)
+2024.07.19 19:18:40 INFO  time: compiled app in 0.52s
+2024.07.19 19:18:41 INFO  compiling app (1 scala source)
+2024.07.19 19:18:41 INFO  time: compiled app in 0.49s
+juil. 19, 2024 7:20:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1638
+2024.07.19 19:20:30 INFO  skipping build import with status 'Installed'
+2024.07.19 19:20:30 INFO  Disconnecting from Bloop session...
+2024.07.19 19:20:30 INFO  Shut down connection with build server.
+2024.07.19 19:20:30 INFO  Shut down connection with build server.
+2024.07.19 19:20:30 INFO  Attempting to connect to the build server...
+2024.07.19 19:20:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:20:30 INFO  Attempting to connect to the build server...
+2024.07.19 19:20:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:20:30 INFO  time: Connected to build server in 82ms
+2024.07.19 19:20:30 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:20:30 INFO  time: Imported build in 0.14s
+2024.07.19 19:20:30 INFO  running doctor check
+2024.07.19 19:20:30 INFO  java targets: core-test, core, app-test, app, s8_functprog_projet-build, root, root-test
+2024.07.19 19:20:34 INFO  time: indexed workspace in 3.13s
+2024.07.19 19:20:34 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:20:34 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:20:34 INFO  compiling app (1 scala source)
+2024.07.19 19:20:34 INFO  compiling core-test (1 scala source)
+2024.07.19 19:20:34 INFO  time: compiled core-test in 0.26s
+2024.07.19 19:20:34 INFO  time: compiled app in 0.62s
+juil. 19, 2024 7:21:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\.reports\metals-full\2024-07-19\r_compiler-error_(s8_functprog_projet-build)_19-21-00-383.md
+juil. 19, 2024 7:21:01 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\.reports\metals-full\2024-07-19\r_compiler-error_(s8_functprog_projet-build)_19-21-00-996.md
+juil. 19, 2024 7:21:03 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\.reports\metals-full\2024-07-19\r_compiler-error_(s8_functprog_projet-build)_19-21-03-291.md
+juil. 19, 2024 7:21:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1721
+juil. 19, 2024 7:21:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1729
+2024.07.19 19:21:19 INFO  compiling app (1 scala source)
+2024.07.19 19:21:19 INFO  time: compiled app in 0.55s
+2024.07.19 19:21:25 INFO  compiling app (1 scala source)
+2024.07.19 19:21:25 INFO  time: compiled app in 0.51s
+2024.07.19 19:21:35 INFO  compiling app (1 scala source)
+2024.07.19 19:21:35 INFO  time: compiled app in 0.46s
+2024.07.19 19:21:39 INFO  running 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals5497543859709194403\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.19 19:21:41 INFO  [info] welcome to sbt 1.10.0 (Oracle Corporation Java 18.0.2.1)
+2024.07.19 19:21:42 INFO  [info] loading settings for project s8_functprog_projet-build-build from metals.sbt ...
+2024.07.19 19:21:42 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\project
+2024.07.19 19:21:44 INFO  [info] loading settings for project s8_functprog_projet-build from metals.sbt ...
+2024.07.19 19:21:44 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project
+2024.07.19 19:21:47 INFO  [success] Generated .bloop\s8_functprog_projet-build.json
+2024.07.19 19:21:47 INFO  [success] Total time: 3 s, completed 19 juil. 2024, 19:21:47
+2024.07.19 19:21:50 INFO  [info] loading settings for project root from build.sbt ...
+2024.07.19 19:21:50 INFO  [info] set current project to S8_FunctProg_Projet (in build file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/)
+2024.07.19 19:21:52 INFO  [success] Generated .bloop\root.json
+2024.07.19 19:21:52 INFO  [success] Generated .bloop\root-test.json
+2024.07.19 19:21:52 INFO  [success] Generated .bloop\core.json
+2024.07.19 19:21:52 INFO  [success] Generated .bloop\core-test.json
+2024.07.19 19:21:53 INFO  [success] Generated .bloop\app-test.json
+2024.07.19 19:21:53 INFO  [success] Generated .bloop\app.json
+2024.07.19 19:21:53 INFO  [success] Total time: 2 s, completed 19 juil. 2024, 19:21:53
+2024.07.19 19:21:53 INFO  time: ran 'sbt bloopInstall' in 14s
+2024.07.19 19:21:53 INFO  Disconnecting from Bloop session...
+2024.07.19 19:21:53 INFO  Shut down connection with build server.
+2024.07.19 19:21:53 INFO  Shut down connection with build server.
+2024.07.19 19:21:53 INFO  Attempting to connect to the build server...
+2024.07.19 19:21:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:21:53 INFO  Attempting to connect to the build server...
+2024.07.19 19:21:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:21:53 INFO  time: Connected to build server in 0.14s
+2024.07.19 19:21:53 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:21:53 INFO  time: Imported build in 0.14s
+2024.07.19 19:21:53 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:21:53 INFO  running doctor check
+2024.07.19 19:21:53 INFO  java targets: core-test, core, app-test, app, s8_functprog_projet-build, root, root-test
+2024.07.19 19:21:56 INFO  time: indexed workspace in 3.12s
+2024.07.19 19:22:02 INFO  compiling core (2 scala sources)
+2024.07.19 19:22:02 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:22:02 INFO  time: compiled core in 0.18s
+2024.07.19 19:22:06 INFO  compiling core (2 scala sources)
+2024.07.19 19:22:06 INFO  time: compiled core in 0.13s
+2024.07.19 19:22:14 INFO  compiling core (2 scala sources)
+2024.07.19 19:22:14 INFO  time: compiled core in 0.21s
+juil. 19, 2024 7:22:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1821
+2024.07.19 19:22:28 INFO  compiling core (2 scala sources)
+2024.07.19 19:22:28 INFO  time: compiled core in 0.12s
+juil. 19, 2024 7:22:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1853
+juil. 19, 2024 7:22:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1856
+2024.07.19 19:22:41 INFO  skipping build import with status 'Dismissed'
+2024.07.19 19:22:42 INFO  skipping build import with status 'Dismissed'
+2024.07.19 19:22:46 INFO  skipping build import with status 'Dismissed'
+2024.07.19 19:32:31 INFO  compiling core (2 scala sources)
+2024.07.19 19:32:31 INFO  time: compiled core in 0.24s
+2024.07.19 19:32:38 INFO  running 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals17419059171754931919\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.19 19:32:40 INFO  [info] welcome to sbt 1.10.0 (Oracle Corporation Java 18.0.2.1)
+2024.07.19 19:32:40 INFO  [info] loading settings for project s8_functprog_projet-build-build from metals.sbt ...
+2024.07.19 19:32:42 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\project
+2024.07.19 19:32:43 INFO  [info] loading settings for project s8_functprog_projet-build from metals.sbt ...
+2024.07.19 19:32:43 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project
+2024.07.19 19:32:46 INFO  [success] Generated .bloop\s8_functprog_projet-build.json
+2024.07.19 19:32:46 INFO  [success] Total time: 3 s, completed 19 juil. 2024, 19:32:46
+2024.07.19 19:32:50 INFO  [info] loading settings for project root from build.sbt ...
+2024.07.19 19:32:50 INFO  [info] set current project to S8_FunctProg_Projet (in build file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/)
+2024.07.19 19:32:50 INFO  [success] Generated .bloop\root-test.json
+2024.07.19 19:32:50 INFO  [success] Generated .bloop\root.json
+2024.07.19 19:32:52 INFO  [success] Generated .bloop\core.json
+2024.07.19 19:32:52 INFO  [success] Generated .bloop\core-test.json
+2024.07.19 19:32:52 INFO  [success] Generated .bloop\app.json
+2024.07.19 19:32:52 INFO  [success] Generated .bloop\app-test.json
+2024.07.19 19:32:52 INFO  [success] Total time: 2 s, completed 19 juil. 2024, 19:32:52
+2024.07.19 19:32:52 INFO  time: ran 'sbt bloopInstall' in 14s
+2024.07.19 19:32:52 INFO  Disconnecting from Bloop session...
+2024.07.19 19:32:52 INFO  Shut down connection with build server.
+2024.07.19 19:32:52 INFO  Shut down connection with build server.
+2024.07.19 19:32:52 INFO  Attempting to connect to the build server...
+2024.07.19 19:32:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:32:52 INFO  Attempting to connect to the build server...
+2024.07.19 19:32:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:32:52 INFO  time: Connected to build server in 0.15s
+2024.07.19 19:32:52 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:32:52 INFO  time: Imported build in 0.14s
+2024.07.19 19:32:53 INFO  running doctor check
+2024.07.19 19:32:53 INFO  java targets: core-test, core, app-test, app, s8_functprog_projet-build, root, root-test
+2024.07.19 19:32:55 INFO  time: indexed workspace in 2.89s
+2024.07.19 19:33:01 INFO  Deduplicating compilation of core from bsp client 'Metals 1.3.3' (since 8.758s)
+2024.07.19 19:33:01 INFO  compiling core-test (1 scala source)
+2024.07.19 19:33:01 INFO  compiling app (1 scala source)
+juil. 19, 2024 7:33:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1905
+2024.07.19 19:33:01 INFO  time: compiled core-test in 0.38s
+2024.07.19 19:33:01 INFO  time: compiled app in 0.79s
+juil. 19, 2024 7:33:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1912
+2024.07.19 19:33:03 INFO  compiling app (1 scala source)
+2024.07.19 19:33:03 INFO  time: compiled app in 0.53s
+juil. 19, 2024 7:33:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1930
+2024.07.19 19:33:21 INFO  running 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals11265397000495384910\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.19 19:33:23 INFO  [info] welcome to sbt 1.10.0 (Oracle Corporation Java 18.0.2.1)
+2024.07.19 19:33:25 INFO  [info] loading settings for project s8_functprog_projet-build-build from metals.sbt ...
+2024.07.19 19:33:25 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\project
+2024.07.19 19:33:26 INFO  [info] loading settings for project s8_functprog_projet-build from metals.sbt ...
+2024.07.19 19:33:26 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project
+2024.07.19 19:33:29 INFO  [success] Generated .bloop\s8_functprog_projet-build.json
+2024.07.19 19:33:29 INFO  [success] Total time: 3 s, completed 19 juil. 2024, 19:33:29
+2024.07.19 19:33:33 INFO  [info] loading settings for project root from build.sbt ...
+2024.07.19 19:33:33 INFO  [info] set current project to S8_FunctProg_Projet (in build file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/)
+2024.07.19 19:33:34 INFO  [success] Generated .bloop\root-test.json
+2024.07.19 19:33:34 INFO  [success] Generated .bloop\root.json
+2024.07.19 19:33:34 INFO  [success] Generated .bloop\core.json
+2024.07.19 19:33:34 INFO  [success] Generated .bloop\core-test.json
+2024.07.19 19:33:34 INFO  [warn] 
+2024.07.19 19:33:34 INFO  [warn] 	Note: Unresolved dependencies path:
+2024.07.19 19:33:34 INFO  [error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+2024.07.19 19:33:34 INFO  [warn] Removed stale C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.bloop\app.json
+2024.07.19 19:33:34 INFO  [warn] Removed stale C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.bloop\app-test.json
+2024.07.19 19:33:34 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading dev.zio:zio-console_3:0.5.1
+2024.07.19 19:33:34 INFO  [error]   Not found
+2024.07.19 19:33:34 INFO  [error]   Not found
+2024.07.19 19:33:34 INFO  [error]   not found: C:\Users\arrhu\.ivy2\localdev.zio\zio-console_3\0.5.1\ivys\ivy.xml
+2024.07.19 19:33:34 INFO  [error]   not found: https://repo1.maven.org/maven2/dev/zio/zio-console_3/0.5.1/zio-console_3-0.5.1.pom
+2024.07.19 19:33:34 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:346)
+2024.07.19 19:33:34 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$39(CoursierDependencyResolution.scala:315)
+2024.07.19 19:33:34 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
+2024.07.19 19:33:34 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:315)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:60)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:134)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:74)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:147)
+2024.07.19 19:33:34 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:147)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:128)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:220)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:161)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3867)
+2024.07.19 19:33:34 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.Execute.work(Execute.scala:292)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+2024.07.19 19:33:34 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+2024.07.19 19:33:34 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.07.19 19:33:34 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2024.07.19 19:33:34 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.07.19 19:33:34 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2024.07.19 19:33:34 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2024.07.19 19:33:34 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:833)
+2024.07.19 19:33:34 INFO  [error] (app / update) sbt.librarymanagement.ResolveException: Error downloading dev.zio:zio-console_3:0.5.1
+2024.07.19 19:33:34 INFO  [error]   Not found
+2024.07.19 19:33:34 INFO  [error]   Not found
+2024.07.19 19:33:34 INFO  [error]   not found: C:\Users\arrhu\.ivy2\localdev.zio\zio-console_3\0.5.1\ivys\ivy.xml
+2024.07.19 19:33:34 INFO  [error]   not found: https://repo1.maven.org/maven2/dev/zio/zio-console_3/0.5.1/zio-console_3-0.5.1.pom
+2024.07.19 19:33:34 INFO  [error] Total time: 1 s, completed 19 juil. 2024, 19:33:35
+2024.07.19 19:33:35 INFO  time: ran 'sbt bloopInstall' in 13s
+2024.07.19 19:33:35 INFO  Disconnecting from Bloop session...
+2024.07.19 19:33:35 ERROR sbt command failed: C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals11265397000495384910\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.07.19 19:33:35 INFO  Shut down connection with build server.
+2024.07.19 19:33:35 INFO  Shut down connection with build server.
+2024.07.19 19:33:35 INFO  Attempting to connect to the build server...
+2024.07.19 19:33:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:33:35 INFO  Attempting to connect to the build server...
+2024.07.19 19:33:35 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:33:35 INFO  time: Connected to build server in 0.1s
+2024.07.19 19:33:35 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:33:35 INFO  time: Imported build in 0.1s
+2024.07.19 19:33:35 INFO  running doctor check
+2024.07.19 19:33:35 INFO  java targets: core-test, core, s8_functprog_projet-build, root, root-test
+2024.07.19 19:33:38 INFO  time: indexed workspace in 2.55s
+2024.07.19 19:33:38 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:33:47 INFO  skipping build import with status 'Installed'
+2024.07.19 19:33:47 INFO  Disconnecting from Bloop session...
+2024.07.19 19:33:47 INFO  Shut down connection with build server.
+juil. 19, 2024 7:33:47 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.ClosedChannelException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:135)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:191)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:160)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.$anonfun$cancel$1(FutureWithTimeout.scala:37)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.cancel(FutureWithTimeout.scala:37)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$5(BuildServerConnection.scala:554)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$5$adapted(BuildServerConnection.scala:553)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpenAndConnected(SocketChannelImpl.java:215)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:527)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:124)
+	at java.base/sun.nio.ch.ChannelOutputStream.writeFullyImpl(ChannelOutputStream.java:60)
+	at java.base/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:79)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:122)
+	at java.base/java.io.OutputStream.write(OutputStream.java:127)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:105)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 18 more
+
+2024.07.19 19:33:47 INFO  Cancelling compilation on Bloop server
+2024.07.19 19:33:47 INFO  Cancelling compilation on Bloop server
+2024.07.19 19:33:47 INFO  Shut down connection with build server.
+2024.07.19 19:33:47 INFO  Attempting to connect to the build server...
+2024.07.19 19:33:47 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:33:47 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:33:47 INFO  Attempting to connect to the build server...
+2024.07.19 19:33:47 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:33:47 INFO  time: Connected to build server in 0.39s
+2024.07.19 19:33:47 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:33:47 INFO  running doctor check
+2024.07.19 19:33:47 INFO  java targets: core-test, core, s8_functprog_projet-build, root, root-test
+2024.07.19 19:33:50 INFO  time: indexed workspace in 2.61s
+2024.07.19 19:33:50 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:33:50 INFO  compiling core-test (1 scala source)
+2024.07.19 19:33:50 INFO  time: compiled core-test in 0.26s
+juil. 19, 2024 7:34:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1984
+2024.07.19 19:34:42 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:35:37 INFO  running 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals2407183202284159669\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.19 19:35:38 INFO  [info] welcome to sbt 1.10.0 (Oracle Corporation Java 18.0.2.1)
+2024.07.19 19:35:38 INFO  [info] loading settings for project s8_functprog_projet-build-build from metals.sbt ...
+2024.07.19 19:35:40 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\project
+2024.07.19 19:35:40 INFO  [info] loading settings for project s8_functprog_projet-build from metals.sbt ...
+2024.07.19 19:35:40 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project
+2024.07.19 19:35:44 INFO  [success] Generated .bloop\s8_functprog_projet-build.json
+2024.07.19 19:35:44 INFO  [success] Total time: 3 s, completed 19 juil. 2024, 19:35:44
+2024.07.19 19:35:47 INFO  [info] loading settings for project root from build.sbt ...
+2024.07.19 19:35:47 INFO  [info] set current project to S8_FunctProg_Projet (in build file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/)
+2024.07.19 19:35:47 INFO  [success] Generated .bloop\root-test.json
+2024.07.19 19:35:47 INFO  [success] Generated .bloop\root.json
+2024.07.19 19:35:47 INFO  [success] Generated .bloop\core.json
+2024.07.19 19:35:47 INFO  [success] Generated .bloop\core-test.json
+2024.07.19 19:35:49 INFO  [warn] 
+2024.07.19 19:35:49 INFO  [warn] 	Note: Unresolved dependencies path:
+2024.07.19 19:35:49 INFO  [error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+2024.07.19 19:35:49 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading dev.zio:zio-console_3:2.0.0
+2024.07.19 19:35:49 INFO  [error]   Not found
+2024.07.19 19:35:49 INFO  [error]   Not found
+2024.07.19 19:35:49 INFO  [error]   not found: C:\Users\arrhu\.ivy2\localdev.zio\zio-console_3\2.0.0\ivys\ivy.xml
+2024.07.19 19:35:49 INFO  [error]   not found: https://repo1.maven.org/maven2/dev/zio/zio-console_3/2.0.0/zio-console_3-2.0.0.pom
+2024.07.19 19:35:49 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:346)
+2024.07.19 19:35:49 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$39(CoursierDependencyResolution.scala:315)
+2024.07.19 19:35:49 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
+2024.07.19 19:35:49 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:315)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:60)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:134)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:74)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:147)
+2024.07.19 19:35:49 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:147)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:128)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:220)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:161)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3867)
+2024.07.19 19:35:49 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.Execute.work(Execute.scala:292)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+2024.07.19 19:35:49 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+2024.07.19 19:35:49 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.07.19 19:35:49 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2024.07.19 19:35:49 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.07.19 19:35:49 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2024.07.19 19:35:49 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2024.07.19 19:35:49 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:833)
+2024.07.19 19:35:49 INFO  [error] (app / update) sbt.librarymanagement.ResolveException: Error downloading dev.zio:zio-console_3:2.0.0
+2024.07.19 19:35:49 INFO  [error]   Not found
+2024.07.19 19:35:49 INFO  [error]   Not found
+2024.07.19 19:35:49 INFO  [error]   not found: C:\Users\arrhu\.ivy2\localdev.zio\zio-console_3\2.0.0\ivys\ivy.xml
+2024.07.19 19:35:49 INFO  [error]   not found: https://repo1.maven.org/maven2/dev/zio/zio-console_3/2.0.0/zio-console_3-2.0.0.pom
+2024.07.19 19:35:49 INFO  [error] Total time: 1 s, completed 19 juil. 2024, 19:35:49
+2024.07.19 19:35:49 INFO  time: ran 'sbt bloopInstall' in 12s
+2024.07.19 19:35:49 ERROR sbt command failed: C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals2407183202284159669\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.07.19 19:35:49 INFO  Disconnecting from Bloop session...
+2024.07.19 19:35:49 INFO  Shut down connection with build server.
+2024.07.19 19:35:49 INFO  Shut down connection with build server.
+2024.07.19 19:35:49 INFO  Attempting to connect to the build server...
+2024.07.19 19:35:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:35:49 INFO  Attempting to connect to the build server...
+2024.07.19 19:35:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:35:49 INFO  time: Connected to build server in 82ms
+2024.07.19 19:35:49 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:35:49 INFO  running doctor check
+2024.07.19 19:35:49 INFO  java targets: core-test, core, s8_functprog_projet-build, root, root-test
+2024.07.19 19:35:51 INFO  time: indexed workspace in 2.35s
+2024.07.19 19:35:51 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:35:51 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:35:51 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:35:51 INFO  compiling core-test (1 scala source)
+2024.07.19 19:35:51 INFO  time: compiled core-test in 0.21s
+2024.07.19 19:35:52 INFO  skipping build import with status 'Installed'
+2024.07.19 19:35:51 INFO  Disconnecting from Bloop session...
+2024.07.19 19:35:52 INFO  Shut down connection with build server.
+2024.07.19 19:35:51 INFO  Shut down connection with build server.
+juil. 19, 2024 7:35:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.ClosedChannelException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:135)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.sendCancelNotification(RemoteEndpoint.java:191)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint$1.cancel(RemoteEndpoint.java:160)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.$anonfun$cancel$1(FutureWithTimeout.scala:37)
+	at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.scala:17)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.utils.FutureWithTimeout$$anon$1.cancel(FutureWithTimeout.scala:37)
+	at scala.meta.internal.metals.Cancelable$.$anonfun$cancelAll$1(Cancelable.scala:29)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at scala.meta.internal.metals.Cancelable$.cancelAll(Cancelable.scala:28)
+	at scala.meta.internal.metals.MutableCancelable.cancel(MutableCancelable.scala:25)
+	at scala.meta.internal.metals.utils.RequestRegistry.cancel(RequestRegistry.scala:94)
+	at scala.meta.internal.metals.BuildServerConnection.cancel(BuildServerConnection.scala:450)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:182)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:174)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpenAndConnected(SocketChannelImpl.java:215)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:527)
+	at java.base/sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:124)
+	at java.base/sun.nio.ch.ChannelOutputStream.writeFullyImpl(ChannelOutputStream.java:60)
+	at java.base/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:79)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:122)
+	at java.base/java.io.OutputStream.write(OutputStream.java:127)
+	at java.base/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:105)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:137)
+	at java.base/java.io.FilterOutputStream.write(FilterOutputStream.java:108)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 20 more
+
+2024.07.19 19:35:51 INFO  Attempting to connect to the build server...
+2024.07.19 19:35:52 INFO  Scala test classes not supported by server
+2024.07.19 19:35:51 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:35:51 INFO  Attempting to connect to the build server...
+2024.07.19 19:35:51 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:35:51 INFO  time: Connected to build server in 68ms
+2024.07.19 19:35:51 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:35:51 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:35:51 INFO  time: Imported build in 0.4s
+2024.07.19 19:35:52 INFO  running doctor check
+2024.07.19 19:35:52 INFO  java targets: core-test, core, s8_functprog_projet-build, root, root-test
+2024.07.19 19:35:54 INFO  time: indexed workspace in 2.42s
+2024.07.19 19:35:54 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:35:59 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:35:59 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:35:59 INFO  compiling core-test (1 scala source)
+2024.07.19 19:35:59 INFO  time: compiled core-test in 0.24s
+juil. 19, 2024 7:36:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2038
+2024.07.19 19:37:42 INFO  running 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals12054807446723896343\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.19 19:37:44 INFO  [info] welcome to sbt 1.10.0 (Oracle Corporation Java 18.0.2.1)
+2024.07.19 19:37:44 INFO  [info] loading settings for project s8_functprog_projet-build-build from metals.sbt ...
+2024.07.19 19:37:46 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\project
+2024.07.19 19:37:46 INFO  [info] loading settings for project s8_functprog_projet-build from metals.sbt ...
+2024.07.19 19:37:46 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project
+2024.07.19 19:37:49 INFO  [success] Generated .bloop\s8_functprog_projet-build.json
+2024.07.19 19:37:49 INFO  [success] Total time: 2 s, completed 19 juil. 2024, 19:37:49
+2024.07.19 19:37:52 INFO  [info] loading settings for project root from build.sbt ...
+2024.07.19 19:37:52 INFO  [info] set current project to S8_FunctProg_Projet (in build file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/)
+2024.07.19 19:37:55 INFO  [success] Generated .bloop\root.json
+2024.07.19 19:37:55 INFO  [success] Generated .bloop\root-test.json
+2024.07.19 19:37:55 INFO  [success] Generated .bloop\core.json
+2024.07.19 19:37:55 INFO  [success] Generated .bloop\core-test.json
+2024.07.19 19:37:55 INFO  [success] Generated .bloop\app-test.json
+2024.07.19 19:37:55 INFO  [success] Generated .bloop\app.json
+2024.07.19 19:37:55 INFO  [success] Total time: 3 s, completed 19 juil. 2024, 19:37:56
+2024.07.19 19:37:56 INFO  time: ran 'sbt bloopInstall' in 13s
+2024.07.19 19:37:56 INFO  Disconnecting from Bloop session...
+2024.07.19 19:37:56 INFO  Shut down connection with build server.
+2024.07.19 19:37:56 INFO  Shut down connection with build server.
+2024.07.19 19:37:56 INFO  Attempting to connect to the build server...
+2024.07.19 19:37:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:37:56 INFO  Attempting to connect to the build server...
+2024.07.19 19:37:56 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:37:56 INFO  time: Connected to build server in 0.13s
+2024.07.19 19:37:56 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:37:56 INFO  time: Imported build in 0.14s
+2024.07.19 19:37:56 INFO  running doctor check
+2024.07.19 19:37:56 INFO  java targets: core-test, core, app-test, app, s8_functprog_projet-build, root, root-test
+2024.07.19 19:37:59 INFO  time: indexed workspace in 2.56s
+2024.07.19 19:38:12 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:38:12 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:38:12 INFO  compiling core-test (1 scala source)
+2024.07.19 19:38:12 INFO  compiling app (1 scala source)
+2024.07.19 19:38:12 INFO  time: compiled core-test in 0.29s
+2024.07.19 19:38:12 INFO  time: compiled app in 0.66s
+juil. 19, 2024 7:38:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2081
+2024.07.19 19:38:16 INFO  compiling app (1 scala source)
+2024.07.19 19:38:16 INFO  time: compiled app in 0.87s
+juil. 19, 2024 7:38:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2095
+juil. 19, 2024 7:38:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2102
+2024.07.19 19:38:40 INFO  compiling app (1 scala source)
+2024.07.19 19:38:40 INFO  time: compiled app in 0.54s
+2024.07.19 19:40:53 INFO  skipping build import with status 'Installed'
+2024.07.19 19:40:53 INFO  Disconnecting from Bloop session...
+2024.07.19 19:40:53 INFO  Shut down connection with build server.
+2024.07.19 19:40:53 INFO  Shut down connection with build server.
+2024.07.19 19:40:53 INFO  Attempting to connect to the build server...
+2024.07.19 19:40:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:40:53 INFO  Attempting to connect to the build server...
+2024.07.19 19:40:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:40:53 INFO  time: Connected to build server in 67ms
+2024.07.19 19:40:53 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:40:53 INFO  time: Imported build in 0.11s
+2024.07.19 19:40:53 INFO  running doctor check
+2024.07.19 19:40:53 INFO  java targets: core-test, core, app-test, app, s8_functprog_projet-build, root, root-test
+2024.07.19 19:40:55 INFO  time: indexed workspace in 2.5s
+2024.07.19 19:40:55 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:40:55 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:40:55 INFO  compiling app (1 scala source)
+2024.07.19 19:40:55 INFO  compiling core-test (1 scala source)
+2024.07.19 19:40:55 INFO  time: compiled core-test in 0.21s
+2024.07.19 19:40:55 INFO  time: compiled app in 0.5s
+2024.07.19 19:41:01 INFO  skipping build import with status 'Installed'
+2024.07.19 19:41:01 INFO  Disconnecting from Bloop session...
+2024.07.19 19:41:01 INFO  Shut down connection with build server.
+2024.07.19 19:41:01 INFO  Shut down connection with build server.
+2024.07.19 19:41:01 INFO  Attempting to connect to the build server...
+2024.07.19 19:41:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:41:01 INFO  Attempting to connect to the build server...
+2024.07.19 19:41:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:41:01 INFO  time: Connected to build server in 70ms
+2024.07.19 19:41:01 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:41:01 INFO  time: Imported build in 0.11s
+2024.07.19 19:41:01 INFO  running doctor check
+2024.07.19 19:41:01 INFO  java targets: core-test, core, app-test, app, s8_functprog_projet-build, root, root-test
+2024.07.19 19:41:03 INFO  time: indexed workspace in 2.57s
+2024.07.19 19:41:04 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:41:04 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:41:04 INFO  compiling core-test (1 scala source)
+2024.07.19 19:41:04 INFO  compiling app (1 scala source)
+2024.07.19 19:41:04 INFO  time: compiled core-test in 0.27s
+2024.07.19 19:41:04 INFO  time: compiled app in 0.6s
+juil. 19, 2024 7:41:15 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\.reports\metals-full\2024-07-19\r_compiler-error_(s8_functprog_projet-build)_19-41-15-834.md
+2024.07.19 19:41:16 WARN  Could not calculate checksum for sbt in C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet
+2024.07.19 19:41:16 INFO  Disconnecting from Bloop session...
+2024.07.19 19:41:16 INFO  Shut down connection with build server.
+2024.07.19 19:41:16 INFO  Shut down connection with build server.
+2024.07.19 19:41:16 INFO  Attempting to connect to the build server...
+2024.07.19 19:41:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:41:16 INFO  Attempting to connect to the build server...
+2024.07.19 19:41:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:41:16 INFO  time: Connected to build server in 65ms
+2024.07.19 19:41:16 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:41:16 INFO  time: Imported build in 0.12s
+2024.07.19 19:41:16 INFO  running doctor check
+2024.07.19 19:41:16 INFO  java targets: core-test, core, app-test, app, s8_functprog_projet-build, root, root-test
+juil. 19, 2024 7:41:16 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\.reports\metals-full\2024-07-19\r_compiler-error_(s8_functprog_projet-build)_19-41-16-961.md
+2024.07.19 19:41:19 INFO  time: indexed workspace in 2.71s
+2024.07.19 19:41:19 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:41:19 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:41:19 INFO  compiling app (1 scala source)
+2024.07.19 19:41:19 INFO  compiling core-test (1 scala source)
+2024.07.19 19:41:19 INFO  time: compiled core-test in 0.23s
+2024.07.19 19:41:19 INFO  time: compiled app in 0.52s
+2024.07.19 19:41:21 INFO  skipping build import with status 'Dismissed'
+2024.07.19 19:41:21 INFO  skipping build import with status 'Dismissed'
+2024.07.19 19:41:24 INFO  skipping build import with status 'Dismissed'
+2024.07.19 19:41:25 INFO  running 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals13754481113704589351\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.07.19 19:41:27 INFO  [info] welcome to sbt 1.10.0 (Oracle Corporation Java 18.0.2.1)
+2024.07.19 19:41:28 INFO  [info] loading settings for project s8_functprog_projet-build-build from metals.sbt ...
+2024.07.19 19:41:28 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\project
+2024.07.19 19:41:30 INFO  [info] loading settings for project s8_functprog_projet-build from metals.sbt ...
+2024.07.19 19:41:30 INFO  [info] loading project definition from C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project
+2024.07.19 19:41:33 INFO  [success] Generated .bloop\s8_functprog_projet-build.json
+2024.07.19 19:41:33 INFO  [success] Total time: 3 s, completed 19 juil. 2024, 19:41:33
+2024.07.19 19:41:36 INFO  [info] loading settings for project root from build.sbt ...
+2024.07.19 19:41:36 INFO  [info] set current project to S8_FunctProg_Projet (in build file:/C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/)
+2024.07.19 19:41:37 INFO  [success] Generated .bloop\root.json
+2024.07.19 19:41:37 INFO  [success] Generated .bloop\root-test.json
+2024.07.19 19:41:37 INFO  [success] Generated .bloop\core.json
+2024.07.19 19:41:37 INFO  [success] Generated .bloop\core-test.json
+2024.07.19 19:41:37 INFO  [warn] 
+2024.07.19 19:41:37 INFO  [warn] 	Note: Unresolved dependencies path:
+2024.07.19 19:41:37 INFO  [error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+2024.07.19 19:41:37 INFO  [warn] Removed stale C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.bloop\app.json
+2024.07.19 19:41:37 INFO  [warn] Removed stale C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.bloop\app-test.json
+2024.07.19 19:41:37 INFO  [error] sbt.librarymanagement.ResolveException: Error downloading dev.zio:zio-console_3:0.6.0
+2024.07.19 19:41:37 INFO  [error]   Not found
+2024.07.19 19:41:37 INFO  [error]   Not found
+2024.07.19 19:41:37 INFO  [error]   not found: C:\Users\arrhu\.ivy2\localdev.zio\zio-console_3\0.6.0\ivys\ivy.xml
+2024.07.19 19:41:37 INFO  [error]   not found: https://repo1.maven.org/maven2/dev/zio/zio-console_3/0.6.0/zio-console_3-0.6.0.pom
+2024.07.19 19:41:37 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:346)
+2024.07.19 19:41:37 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$39(CoursierDependencyResolution.scala:315)
+2024.07.19 19:41:37 INFO  [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
+2024.07.19 19:41:37 INFO  [error] 	at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:315)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:60)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:134)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:74)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:147)
+2024.07.19 19:41:37 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:147)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:128)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:220)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:161)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3867)
+2024.07.19 19:41:37 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.Execute.work(Execute.scala:292)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+2024.07.19 19:41:37 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+2024.07.19 19:41:37 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.07.19 19:41:37 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+2024.07.19 19:41:37 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.07.19 19:41:37 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+2024.07.19 19:41:37 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+2024.07.19 19:41:37 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:833)
+2024.07.19 19:41:37 INFO  [error] (app / update) sbt.librarymanagement.ResolveException: Error downloading dev.zio:zio-console_3:0.6.0
+2024.07.19 19:41:37 INFO  [error]   Not found
+2024.07.19 19:41:37 INFO  [error]   Not found
+2024.07.19 19:41:37 INFO  [error]   not found: C:\Users\arrhu\.ivy2\localdev.zio\zio-console_3\0.6.0\ivys\ivy.xml
+2024.07.19 19:41:37 INFO  [error]   not found: https://repo1.maven.org/maven2/dev/zio/zio-console_3/0.6.0/zio-console_3-0.6.0.pom
+2024.07.19 19:41:37 INFO  [error] Total time: 1 s, completed 19 juil. 2024, 19:41:38
+2024.07.19 19:41:38 INFO  time: ran 'sbt bloopInstall' in 13s
+2024.07.19 19:41:38 ERROR sbt command failed: C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\arrhu\AppData\Local\Temp\metals13754481113704589351\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.07.19 19:41:38 INFO  Disconnecting from Bloop session...
+2024.07.19 19:41:38 INFO  Shut down connection with build server.
+2024.07.19 19:41:38 INFO  Shut down connection with build server.
+2024.07.19 19:41:38 INFO  Attempting to connect to the build server...
+2024.07.19 19:41:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:41:38 INFO  Attempting to connect to the build server...
+2024.07.19 19:41:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\project\.metals\bsp.trace.json or C:\Users\arrhu\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.07.19 19:41:38 INFO  time: Connected to build server in 99ms
+2024.07.19 19:41:38 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.19 19:41:38 INFO  time: Imported build in 0.1s
+2024.07.19 19:41:38 INFO  running doctor check
+2024.07.19 19:41:38 INFO  java targets: core-test, core, s8_functprog_projet-build, root, root-test
+2024.07.19 19:41:41 INFO  time: indexed workspace in 2.63s
+2024.07.19 19:41:41 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:41:50 WARN  Invalid text document uri received from build server: file:///C:/Arthur/Efrei%20Paris/M1/S8/Functional%20Programming/Project/S8_FunctProg_Projet/core/src/main/scala/GraphExample.scala
+2024.07.19 19:41:50 INFO  BSP server: No class, trait or object is defined in the compilation unit.
+The incremental compiler cannot record the dependency information in such case.
+Some errors like unused import referring to a non-existent class might not be reported.
+
+2024.07.19 19:41:50 INFO  compiling core-test (1 scala source)
+2024.07.19 19:41:50 INFO  time: compiled core-test in 0.25s
+2024.07.19 19:41:50 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:41:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:41:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+juil. 19, 2024 7:41:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2219
+juil. 19, 2024 7:41:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2226
+2024.07.19 19:41:53 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:48:21 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:48:21 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:49:06 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+juil. 19, 2024 7:49:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2235
+2024.07.19 19:50:46 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:50:56 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+juil. 19, 2024 7:50:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2257
+juil. 19, 2024 7:51:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2264
+2024.07.19 19:51:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:51:55 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+juil. 19, 2024 7:51:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2271
+juil. 19, 2024 7:51:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2278
+juil. 19, 2024 7:51:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2285
+2024.07.19 19:51:57 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:52:07 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:52:34 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+juil. 19, 2024 7:52:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2293
+2024.07.19 19:52:39 INFO  skipping build import with status 'Dismissed'
+2024.07.19 19:52:51 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:52:51 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:52:55 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:52:55 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:52:55 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:00 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:00 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:00 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:04 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:04 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:05 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:05 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:07 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:08 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:08 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:53:09 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:09 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:09 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:10 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:53:11 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:11 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:11 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:12 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:13 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:53:13 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:13 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:14 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:14 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:15 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:14 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:15 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:16 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:16 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:17 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:53:18 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:18 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:20 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:20 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:20 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:20 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:20 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:20 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:20 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:21 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:53:21 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:21 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:23 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:23 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 19:53:23 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:25 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:25 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:27 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:27 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 19:53:27 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 20:13:04 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:13:04 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:13:06 INFO  compiling core-test (1 scala source)
+2024.07.19 20:13:06 INFO  time: compiled core-test in 0.28s
+juil. 19, 2024 8:13:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2410
+2024.07.19 20:13:18 INFO  compiling core-test (1 scala source)
+2024.07.19 20:13:18 INFO  time: compiled core-test in 61ms
+2024.07.19 20:14:20 INFO  skipping build import with status 'Dismissed'
+juil. 19, 2024 8:14:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2468
+2024.07.19 20:14:29 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:30 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:30 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:30 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:32 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 20:14:36 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:36 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:36 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:36 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:36 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:36 WARN  Using indexes to guess the definition of Console
+2024.07.19 20:14:36 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 20:14:37 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 20:14:44 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:14:58 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:15:04 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:15:04 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:15:06 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:15:28 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:08 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:08 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+juil. 19, 2024 8:25:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2511
+2024.07.19 20:25:22 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:22 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:47 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:48 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:50 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:50 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:50 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:50 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:51 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 20:25:51 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:51 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:53 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:52 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:53 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:54 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 20:25:53 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:53 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:54 WARN  no build target for: C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala
+2024.07.19 20:25:55 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:55 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.19 20:25:55 INFO  no build target found for C:\Arthur\Efrei Paris\M1\S8\Functional Programming\Project\S8_FunctProg_Projet\app\src\main\scala\App.scala. Using presentation compiler with project's scala-library version: 3.3.3

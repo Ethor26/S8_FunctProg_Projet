@@ -1,99 +1,67 @@
-package scalaproject.app
-
-import zio.{ ZIO, ZIOAppDefault, Console }
+import zio._
 import zio.Console._
-import scalaproject.core._
-import scalaproject.core.Edge
+import zio.Console.{printLine, readLine}
+import java.io.IOException
 
-object App extends ZIOAppDefault {
+object Main extends ZIOAppDefault {
 
-//   def run = {
-//     val program = for {
-//       _ <- Console.printLine("Hello, ZIO!")  // Use printLine for console output
-//     } yield ()
+  def run: URIO[ZIOAppArgs & Scope, ExitCode] = program.exitCode
 
-//     program
-//       .catchAll(err => Console.printLine(s"Error: ${err.getMessage}"))
-//       .provide(Console.live)  // Use Console.live for providing the Console environment
-//   }
-
-// Define your ZIO program
-  val program: ZIO[Console, IOException, Unit] = for {
-    _ <- Console.printLine("Hello, ZIO!")
+  val program: ZIO[Any, IOException, Unit] = for {
+    _ <- printLine("Welcome to the ZIO Graph Application!")
+    _ <- selectMenu()
   } yield ()
 
-  // Run the program with default environment provided by ZIOAppDefault
-  override def run: ZIO[Environment with Console, Any, Any] = program
+  def selectMenu(): ZIO[Any, IOException, Unit] = for {
+    _ <- printLine("Select Graph Type:")
+    _ <- printLine("1. Directed Graph")
+    _ <- printLine("2. Undirected Graph")
+    _ <- printLine("3. Weighted Graph")
+    _ <- printLine("Q. Exit") 
 
-  def mainMenu(): ZIO[Console, Throwable, Unit] = {
+    choice <- readLine
+    _ <- choice match {
+      case "1" => mainMenu()
+      case "2" => mainMenu()
+      case "3" => mainMenu()
+      case "Q" => printLine("Goodbye!") *> ZIO.succeed(())
+      case _ => printLine("Invalid choice. Please try again.") *> selectMenu()
+    }
+  } yield ()
+
+  def mainMenu(): ZIO[Any, IOException, Unit] = {
     for {
-      _ <- printLine("Main Menu")
-      _ <- printLine("1. Create Graph")
-      _ <- printLine("2. Add Edge")
-      _ <- printLine("3. Remove Edge")
-      _ <- printLine("4. Display Graph")
-      _ <- printLine("5. Perform DFS")
-      _ <- printLine("6. Perform BFS")
-      _ <- printLine("7. Exit")
+      _ <- printLine("Main Menu:")
+      _ <- printLine("1. Add Edge")
+      _ <- printLine("2. Remove Edge")
+      _ <- printLine("3. Display Graph")
+      _ <- printLine("4. Save Graph to JSON")
+      _ <- printLine("5. Load Graph from JSON")
+      _ <- printLine("6. Go to Algorithm Menu")
+      _ <- printLine("Q. Exit")
       choice <- readLine
       _ <- choice match {
-        case "1" => createGraph()
-        case "2" => addEdge()
-        case "3" => removeEdge()
-        case "4" => displayGraph()
-        case "5" => performDFS()
-        case "6" => performBFS()
-        case "7" => ZIO.succeed(())
-        case _   => printLine("Invalid choice, please try again.") *> mainMenu()
+        case "1" => addEdgeMenu()
+        case "2" => removeEdgeMenu()
+        case "3" => displayGraph()
+        case "4" => saveGraphToJson()
+        case "5" => loadGraphFromJson()
+        case "6" => algorithmMenu()
+        case "Q" => printLine("Goodbye!") *> selectMenu()
+        case _ => printLine("Invalid choice. Please try again.") *> mainMenu()
       }
     } yield ()
   }
 
-  def createGraph(): ZIO[Console, Throwable, Unit] = {
+  // Dummy implementations for other methods
+  def addEdgeMenu(): ZIO[Any, IOException, Unit] = {
     for {
-      _ <- printLine("Enter graph type (directed/undirected):")
-      graphType <- readLine
-      _ <- graphType match {
-        case "directed" => printLine("Directed graph created.")
-        case "undirected" => printLine("Undirected graph created.")
-        case _ => printLine("Invalid graph type.") *> createGraph()
-      }
-      _ <- mainMenu()
+      _ <- printLine("this is to test the addEdgeMenu")
     } yield ()
   }
-
-  def addEdge(): ZIO[Console, Throwable, Unit] = {
-    for {
-      _ <- printLine("Adding an edge to the graph.")
-      _ <- mainMenu()
-    } yield ()
-  }
-
-  def removeEdge(): ZIO[Console, Throwable, Unit] = {
-    for {
-      _ <- printLine("Removing an edge from the graph.")
-      _ <- mainMenu()
-    } yield ()
-  }
-
-  def displayGraph(): ZIO[Console, Throwable, Unit] = {
-    for {
-      _ <- printLine("Displaying the graph.")
-      _ <- mainMenu()
-    } yield ()
-  }
-
-  def performDFS(): ZIO[Console, Throwable, Unit] = {
-    for {
-      _ <- printLine("Performing DFS on the graph.")
-      _ <- mainMenu()
-    } yield ()
-  }
-
-  def performBFS(): ZIO[Console, Throwable, Unit] = {
-    for {
-      _ <- printLine("Performing BFS on the graph.")
-      _ <- mainMenu()
-    } yield ()
-  }
+  def removeEdgeMenu(): ZIO[Any, IOException, Unit] = ???
+  def displayGraph(): ZIO[Any, IOException, Unit] = ???
+  def saveGraphToJson(): ZIO[Any, IOException, Unit] = ???
+  def loadGraphFromJson(): ZIO[Any, IOException, Unit] = ???
+  def algorithmMenu(): ZIO[Any, IOException, Unit] = ???
 }
