@@ -1,7 +1,16 @@
+package scalaproject.core
+
 import zio.json.*
 import scala.collection.mutable
 
-// Définir la classe abstraite de base pour les graphes
+// Define the Edge class
+case class Edge[V](from: V, to: V, weight: Double = 0.0)
+object Edge {
+  implicit def edgeEncoder[V: JsonEncoder]: JsonEncoder[Edge[V]] = DeriveJsonEncoder.gen[Edge[V]]
+  implicit def edgeDecoder[V: JsonDecoder]: JsonDecoder[Edge[V]] = DeriveJsonDecoder.gen[Edge[V]]
+}
+
+// Define an abstract base class for graphs
 abstract class Graph[V](val weighted: Boolean) {
   def vertices: Set[V]
   def edges: Set[Edge[V]]
@@ -9,7 +18,7 @@ abstract class Graph[V](val weighted: Boolean) {
   def neighbors(vertex: V): Set[V]
   protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): Graph[V]
 
-  // Valider les arêtes
+  // Validate edges
   def validateEdges(edges: Set[Edge[V]]): Set[Edge[V]] = {
     edges.map { edge =>
       if (!weighted && !edge.weight.isNaN && edge.weight != 1.0)
@@ -98,7 +107,7 @@ abstract class Graph[V](val weighted: Boolean) {
       }
     }
 
-    // Ajout des paires non connectées directement pour refléter les distances infinies
+    // Add non-directly connected pairs to reflect infinite distances
     for {
       i <- vertices
       j <- vertices if dist((i, j)) == Double.PositiveInfinity && i != j
@@ -122,7 +131,7 @@ abstract class Graph[V](val weighted: Boolean) {
       val (current, currentDist) = pq.dequeue()
       if (!visited.contains(current)) {
         visited.add(current)
-        for (Edge(`current`, neighbor, weight) <- edges) {
+        for (edge @ Edge(`current`, neighbor, weight) <- edges) {
           val newDist = currentDist + weight
           if (newDist < dist(neighbor)) {
             dist(neighbor) = newDist
@@ -135,9 +144,6 @@ abstract class Graph[V](val weighted: Boolean) {
     Right(dist.toMap)
   }
 }
-
-// Définir la classe pour les arêtes
-case class Edge[V](from: V, to: V, weight: Double = Double.NaN)
 
 // Implémentation d'un graphe non directionnel
 case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
@@ -152,9 +158,13 @@ case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]
     case Edge(`vertex`, v, _) => v
     case Edge(v, `vertex`, _) => v
   }
+
+  // JSON encoders and decoders for UndirectedGraph
+  implicit def undirectedGraphEncoder[V: JsonEncoder]: JsonEncoder[UndirectedGraph[V]] = DeriveJsonEncoder.gen[UndirectedGraph[V]]
+  implicit def undirectedGraphDecoder[V: JsonDecoder]: JsonDecoder[UndirectedGraph[V]] = DeriveJsonDecoder.gen[UndirectedGraph[V]]
 }
 
-// Implémentation d'un graphe directionnel
+// Implementation of a directed graph
 case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
   override val vertices: Set[V] = initialVertices
   override val edges: Set[Edge[V]] = validateEdges(initialEdges)
@@ -233,6 +243,9 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
     result.map(_ => Nil) // Right("No cycles detected")
   }
 
+  // JSON encoders and decoders for DirectedGraph
+  implicit def directedGraphEncoder[V: JsonEncoder]: JsonEncoder[DirectedGraph[V]] = DeriveJsonEncoder.gen[DirectedGraph[V]]
+  implicit def directedGraphDecoder[V: JsonDecoder]: JsonDecoder[DirectedGraph[V]] = DeriveJsonDecoder.gen[DirectedGraph[V]]
 }
 
 object Graph_manager {
