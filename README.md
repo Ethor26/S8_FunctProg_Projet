@@ -36,11 +36,13 @@ We have chosen to create several classes to represent our graphs.
 
 **How**:
 - **Attributes**:
-    - `from`: `Int` representing the vertex where the edge comes from
+    - `from`: `Int` representing the vertex where the edge comes from.
     - `to`: `Int` representing the vertex where the edge goes
     - `weight`: `Double` representing the weight of the edge, default value is `Double.NaN`
 - **Methods**:
     - No methods
+- **Note**:
+  - You certainly noticed vertices are represented by Int, so there are no classes for them here. By using a class for edges, we did not need a class for vertices. But, if respecting the SOLID principles was a concern, it would certainly better to have this Vertices class to give him the responsibilities over itself such as the neighbours method which you will see below in the Methods section of the next Class.
 
 ### The Graph Class (Abstract)
 
@@ -48,7 +50,7 @@ We have chosen to create several classes to represent our graphs.
 
 **How**:
 - **Attributes**:
-    - `vertices`: `Set[Int]` to store the vertices of the graph. You certainly noticed vertices are represented by Int, so there are no classes for them here. By using a class for edges, we did not need a class for vertices. But, if respecting the SOLID principles was a concern, it would certainly better to have this Vertices class to give him the responsibilities over itself such as the neighbours method which you will see below in the Methods section.
+    - `vertices`: `Set[Int]` to store the vertices of the graph.
     - `edges`: `Set[Edge]` to store the edges of the graph
     - `weighted`: `Boolean` to indicate if the graph uses weights or not
 - **Methods**:
