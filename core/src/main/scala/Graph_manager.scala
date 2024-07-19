@@ -1,16 +1,10 @@
-// core/src/main/scala/Graph_manager.scala
-
 import zio.json.*
-// import java.nio.file.{Files, Paths}
-// import java.nio.charset.StandardCharsets
-// import scala.annotation.tailrec
 import scala.collection.mutable
 
 // Définir la classe abstraite de base pour les graphes
-abstract class Graph[V] {
+abstract class Graph[V](val weighted: Boolean) {
   def vertices: Set[V]
   def edges: Set[Edge[V]]
-  def weighted: Boolean
 
   def neighbors(vertex: V): Set[V]
   protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): Graph[V]
@@ -47,7 +41,6 @@ abstract class Graph[V] {
     val oldVertices = oldEdges.flatMap(e => Set(e.from, e.to))
     copyWith(edges -- oldEdges, vertices -- oldVertices.filter(v => edges.exists(e => e.from == v || e.to == v)))
   }
-
 
   // Depth First Search (DFS)
   def dfs(start: V): List[V] = {
@@ -137,12 +130,14 @@ abstract class Graph[V] {
 case class Edge[V](from: V, to: V, weight: Double = Double.NaN)
 
 // Implémentation d'un graphe non directionnel
-case class UndirectedGraph[V](vertices: Set[V], private val initialEdges: Set[Edge[V]], weighted: Boolean) extends Graph[V] {
+case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
+  override val vertices: Set[V] = initialVertices
   override val edges: Set[Edge[V]] = validateEdges(initialEdges)
 
   override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): UndirectedGraph[V] = {
     UndirectedGraph(vertices, edges, weighted)
   }
+
   def neighbors(vertex: V): Set[V] = edges.collect {
     case Edge(`vertex`, v, _) => v
     case Edge(v, `vertex`, _) => v
@@ -150,12 +145,14 @@ case class UndirectedGraph[V](vertices: Set[V], private val initialEdges: Set[Ed
 }
 
 // Implémentation d'un graphe directionnel
-case class DirectedGraph[V](vertices: Set[V], private val initialEdges: Set[Edge[V]], weighted: Boolean) extends Graph[V] {
+case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
+  override val vertices: Set[V] = initialVertices
   override val edges: Set[Edge[V]] = validateEdges(initialEdges)
 
   override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): DirectedGraph[V] = {
     DirectedGraph(vertices, edges, weighted)
   }
+
   def neighbors(vertex: V): Set[V] = edges.collect {
     case Edge(`vertex`, to, _) => to
   }
@@ -231,16 +228,16 @@ object Graph_manager {
   @main
   def main(): Unit = {
     println("Hello world!")
-    var undirected_unweighted_graph = UndirectedGraph[Int](Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
-    println("--- undirected_unweighted_graph.neighbors(1): " + undirected_unweighted_graph.neighbors(1))
-    undirected_unweighted_graph = undirected_unweighted_graph.addEdge(Edge(1, 3)).asInstanceOf[UndirectedGraph[Int]]
-    println("--- undirected_unweighted_graph.neighbors(1) + Edge(1, 3): " + undirected_unweighted_graph.neighbors(1))
+    var undirectedUnweightedGraph = UndirectedGraph[Int](Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
+    println("--- undirectedUnweightedGraph.neighbors(1): " + undirectedUnweightedGraph.neighbors(1))
+    undirectedUnweightedGraph = undirectedUnweightedGraph.addEdge(Edge(1, 3)).asInstanceOf[UndirectedGraph[Int]]
+    println("--- undirectedUnweightedGraph.neighbors(1) + Edge(1, 3): " + undirectedUnweightedGraph.neighbors(1))
     val weightedGraph = UndirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3, 2.0)), weighted = true)
     println("--- weightedGraph.dijkstra(1): " + weightedGraph.dijkstra(1))
 
     // Tests des algorithmes
-    println("--- undirected_unweighted_graph.dfs(1): " + undirected_unweighted_graph.dfs(1))
-    println("--- undirected_unweighted_graph.bfs(1): " + undirected_unweighted_graph.bfs(1))
+    println("--- undirectedUnweightedGraph.dfs(1): " + undirectedUnweightedGraph.dfs(1))
+    println("--- undirectedUnweightedGraph.bfs(1): " + undirectedUnweightedGraph.bfs(1))
     val directedGraph = DirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
     println("--- directedGraph.topologicalSort: " + directedGraph.topologicalSort)
     println("--- directedGraph.detectCycle: " + directedGraph.detectCycle)
