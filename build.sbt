@@ -5,7 +5,7 @@ lazy val root = (project in file("."))
   .aggregate(core, app)
   .settings(
     name := "S8_FunctProg_Projet",
-    addCommandAlias("run", "core/run")
+    addCommandAlias("run", "app/run")
   )
 
 lazy val core = (project in file("core"))
@@ -14,7 +14,7 @@ lazy val core = (project in file("core"))
     Compile / mainClass := Some("Graph_manager"),
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % "3.2.14" % Test,
-      "dev.zio" %% "zio" % "2.0.0",
+      "dev.zio" %% "zio" % "2.0.12",
       "dev.zio" %% "zio-json" % "0.6.2"
     )
   )
@@ -24,6 +24,6 @@ lazy val app = (project in file("app"))
   .settings(
     name := "app",
     libraryDependencies ++= Seq(
-      "dev.zio" %% "zio" % "2.0.0"
+      "dev.zio" %% "zio" % "2.0.12"
     )
   )
