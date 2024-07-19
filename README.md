@@ -13,10 +13,10 @@ The project is divided in 2 parts:
 - The application, in the `app` module
 
 The core library has the files:
-- `Graph.scala` : the graph data structure
+- `Graph_manager.scala` : the graph data structure
 
 The application has the files:
-- `Main.scala` : the main application
+- `App.scala` : the main application
 
 ## Installation
 To run the application, you need to have `sbt` installed on your machine.
@@ -87,13 +87,14 @@ We have chosen to create several classes to represent our graphs.
     - Implements `neighbors` and `copyWith` from `Graph`
     - `topologicalSort`: `Either[String, List[V]]`: Compute a topological sorting of the graph
     - `detectCycle`: `Either[String, List[V]]`: Detect if there are cycles in the graph
+
+
 ## TESTING
 
 ### How to Run the Tests
 1. Go to the root of the project.
-2. Navigate to the `core` folder.
-3. Then go to the `test` folder.
-4. Finally, go to `scala/GraphSpec`, and you can run each test manually by clicking on the run icon next to each one.
+2. open a Terminal
+3. Set "sbt test"
 
 ### Tests Overview
 
@@ -128,3 +129,15 @@ We have chosen to create several classes to represent our graphs.
 - **Cycle Detection**
   - **Goal**: Check that cycle detection works correctly for directed graphs with cycles.
   - **Detail**: The graph contains a cycle with the edges `{(1, 2), (2, 3), (3, 1)}`. The test checks that the cycle is detected and that the message correctly indicates the cycle found.
+
+## Usage Examples
+In the application, you can do sereval actions such as:
+
+- ### create a new graph, then:
+  - Add an edge
+  - Remove an edge
+  - Display the graph
+  - Save graph to JSON
+  - Load Graph from JSON
+  - Go To Algorithm Menu
+- ### Exit the graph
