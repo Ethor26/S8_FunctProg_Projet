@@ -44,11 +44,11 @@ We have chosen to create several classes to represent our graphs.
 
 ### The Graph Class (Abstract)
 
-**Why**: To implement the common behaviors of the concrete graph classes
+**Why**: To implement the common behaviors of the concrete graph classes. We have chosen to make it abstract because the main concern of the project was about directed, undirected, and weighted graphs, so instanciate a Graph object would not be usefull.  
 
 **How**:
 - **Attributes**:
-    - `vertices`: `Set[Int]` to store the vertices of the graph
+    - `vertices`: `Set[Int]` to store the vertices of the graph. You certainly noticed vertices are represented by Int, so there are no classes for them here. By using a class for edges, we did not need a class for vertices. But, if respecting the SOLID principles was a concern, it would certainly better to have this Vertices class to give him the responsibilities over itself such as the neighbours method which you will see below in the Methods section.
     - `edges`: `Set[Edge]` to store the edges of the graph
     - `weighted`: `Boolean` to indicate if the graph uses weights or not
 - **Methods**:
