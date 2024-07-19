@@ -208,9 +208,7 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
 
     def visit(node: V, path: List[V]): Either[String, Unit] = {
       if (stack.contains(node)) {
-        val cycleStartIndex = path.indexOf(node)
-        val cycle = (node :: path).takeRight(cycleStartIndex + 1)
-        Left(s"Cycle detected: ${cycle.mkString(" -> ")} -> ${cycle.head}")
+        Left(s"Cycle detected: ${path.reverse.mkString(" -> ")} -> $node")
       } else if (!visited.contains(node)) {
         stack.add(node)
         visited.add(node)
@@ -229,7 +227,7 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
     }
 
     val result = vertices.foldLeft[Either[String, Unit]](Right(())) {
-      (acc, node) => acc.flatMap(_ => if (!visited.contains(node)) visit(node, List(node)) else Right(()))
+      (acc, node) => acc.flatMap(_ => if (!visited.contains(node)) visit(node, List()) else Right(()))
     }
 
     result.map(_ => Nil) // Right("No cycles detected")

@@ -41,6 +41,6 @@ class GraphSpec extends AnyFlatSpec with Matchers {
 
   it should "detect cycles correctly" in {
     val graph = DirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3), Edge(3, 1)), weighted = false)
-    graph.detectCycle should be (Left("Cycle detected: 3 -> 2 -> 1 -> 3"))
+    graph.detectCycle should be (Left("Cycle detected: 1 -> 2 -> 3 -> 1"))
   }
 }
