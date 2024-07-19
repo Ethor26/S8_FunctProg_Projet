@@ -1,6 +1,6 @@
-package scalaproject.app
+// package S8_FunctProg_Projet.app
 
-import scalaproject.core._
+// import S8_FunctProg_Projet.core._
 import zio._
 import zio.Console._
 import zio.json._

@@ -1,4 +1,4 @@
-package scalaproject.core
+// package S8_FunctProg_Projet.core
 
 import zio.json.*
 import scala.collection.mutable
@@ -160,8 +160,8 @@ case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]
   }
 
   // JSON encoders and decoders for UndirectedGraph
-  implicit def undirectedGraphEncoder[V: JsonEncoder]: JsonEncoder[UndirectedGraph[V]] = DeriveJsonEncoder.gen[UndirectedGraph[V]]
-  implicit def undirectedGraphDecoder[V: JsonDecoder]: JsonDecoder[UndirectedGraph[V]] = DeriveJsonDecoder.gen[UndirectedGraph[V]]
+  implicit def undirectedGraphEncoder[J: JsonEncoder]: JsonEncoder[UndirectedGraph[J]] = DeriveJsonEncoder.gen[UndirectedGraph[J]]
+  implicit def undirectedGraphDecoder[J: JsonDecoder]: JsonDecoder[UndirectedGraph[J]] = DeriveJsonDecoder.gen[UndirectedGraph[J]]
 }
 
 // Implementation of a directed graph
@@ -244,8 +244,8 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
   }
 
   // JSON encoders and decoders for DirectedGraph
-  implicit def directedGraphEncoder[V: JsonEncoder]: JsonEncoder[DirectedGraph[V]] = DeriveJsonEncoder.gen[DirectedGraph[V]]
-  implicit def directedGraphDecoder[V: JsonDecoder]: JsonDecoder[DirectedGraph[V]] = DeriveJsonDecoder.gen[DirectedGraph[V]]
+  implicit def directedGraphEncoder[J: JsonEncoder]: JsonEncoder[DirectedGraph[J]] = DeriveJsonEncoder.gen[DirectedGraph[J]]
+  implicit def directedGraphDecoder[J: JsonDecoder]: JsonDecoder[DirectedGraph[J]] = DeriveJsonDecoder.gen[DirectedGraph[J]]
 }
 
 object Graph_manager {
