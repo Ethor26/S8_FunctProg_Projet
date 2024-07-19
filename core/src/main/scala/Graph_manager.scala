@@ -97,8 +97,18 @@ abstract class Graph[V](val weighted: Boolean) {
         dist((i, j)) = dist((i, k)) + dist((k, j))
       }
     }
+
+    // Ajout des paires non connectées directement pour refléter les distances infinies
+    for {
+      i <- vertices
+      j <- vertices if dist((i, j)) == Double.PositiveInfinity && i != j
+    } {
+      dist((i, j)) = Double.PositiveInfinity
+    }
+
     Right(dist.toMap)
   }
+
 
   // Dijkstra's Algorithm
   def dijkstra(start: V): Either[String, Map[V, Double]] = {
@@ -198,7 +208,9 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
 
     def visit(node: V, path: List[V]): Either[String, Unit] = {
       if (stack.contains(node)) {
-        Left(s"Cycle detected: ${path.reverse.mkString(" -> ")} -> $node")
+        val cycleStartIndex = path.indexOf(node)
+        val cycle = (node :: path).takeRight(cycleStartIndex + 1)
+        Left(s"Cycle detected: ${cycle.mkString(" -> ")} -> ${cycle.head}")
       } else if (!visited.contains(node)) {
         stack.add(node)
         visited.add(node)
@@ -222,6 +234,7 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
 
     result.map(_ => Nil) // Right("No cycles detected")
   }
+
 }
 
 object Graph_manager {
