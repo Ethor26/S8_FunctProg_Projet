@@ -52,16 +52,17 @@ We have chosen to create several classes to represent our graphs.
     - `edges`: `Set[Edge]` to store the edges of the graph
     - `weighted`: `Boolean` to indicate if the graph uses weights or not
 - **Methods**:
-    - `addEdge`: Add an edge to the graph
-    - `addEdges`: Add multiple edges to the graph
-    - `neighbors (abstract)`: Get the neighbors of a vertex
-    - `copyWith (abstract)`: Get the deep copy of the object
-    - `removeEdge`: Remove an edge from the graph
-    - `removeEdges`: Remove multiple edges from the graph
-    - `dfs`: Perform a Depth-First Search on the graph
-    - `bfs`: Perform a Breadth-First Search on the graph
-    - `floydWarshall`: Execute the Floyd-Warshall algorithm on the graph
-    - `dijkstra`: Execute Dijkstra's algorithm on the graph
+    - `addEdge`: `Graph[V]`: Add an edge to the graph
+    - `addEdges`: `Graph[V]`: Add multiple edges to the graph
+    - `neighbors (abstract)`: `Set[V]`: Get the neighbors of a vertex
+    - `copyWith (abstract)`: `Set[V]`: Get the deep copy of the object
+    - `removeEdge`: `Graph[V]`: Remove an edge from the graph
+    - `removeEdges`: `Graph[V]`: Remove multiple edges from the graph
+    - `dfs`: `List[V]`: Perform a Depth-First Search on the graph
+    - `bfs`: `List[V]`: Perform a Breadth-First Search on the graph
+    - `floydWarshall`: `Either[String, Map[(V, V), Double]]`: Execute the Floyd-Warshall algorithm on the graph
+    - `dijkstra`: `Either[String, Map[V, Double]]`: Execute Dijkstra's algorithm on the graph
+    - `validateEdges`: `Set[Edge[V]]`: Check if an edge is valid or not
 
 ### The UndirectedGraph Class (Extends Graph)
 
@@ -82,7 +83,5 @@ We have chosen to create several classes to represent our graphs.
     - Same as the `Graph`, but ensures edges are valid for a directed graph
 - **Methods**:
     - Implements `neighbors` and `copyWith` from `Graph`
-    - `topologicalSort`: Compute a topological sorting of the graph
-    - `detectCycle`: Detect if there are cycles in the graphneighbors and copyWith
-                topologicalSort: compute a topological sorting on the graph
-                detectCycle: detect is there are cycles or not in the graph
+    - `topologicalSort`: `Either[String, List[V]]`: Compute a topological sorting of the graph
+    - `detectCycle`: `Either[String, List[V]]`: Detect if there are cycles in the graph
