@@ -4,7 +4,7 @@ import zio.json.*
 import scala.collection.mutable
 
 // Define the Edge class
-case class Edge[V](from: V, to: V, weight: Double = 0.0)
+case class Edge[V](from: V, to: V, weight: Double = Double.NaN)
 object Edge {
   implicit def edgeEncoder[V: JsonEncoder]: JsonEncoder[Edge[V]] = DeriveJsonEncoder.gen[Edge[V]]
   implicit def edgeDecoder[V: JsonDecoder]: JsonDecoder[Edge[V]] = DeriveJsonDecoder.gen[Edge[V]]
