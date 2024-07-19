@@ -87,3 +87,44 @@ We have chosen to create several classes to represent our graphs.
     - Implements `neighbors` and `copyWith` from `Graph`
     - `topologicalSort`: `Either[String, List[V]]`: Compute a topological sorting of the graph
     - `detectCycle`: `Either[String, List[V]]`: Detect if there are cycles in the graph
+## TESTING
+
+### How to Run the Tests
+1. Go to the root of the project.
+2. Navigate to the `core` folder.
+3. Then go to the `test` folder.
+4. Finally, go to `scala/GraphSpec`, and you can run each test manually by clicking on the run icon next to each one.
+
+### Tests Overview
+
+#### UndirectedGraph
+
+- **Adding and Retrieving Edges**
+  - **Goal**: Check that edges can be added correctly and that a node's neighbors are updated as expected.
+  - **Detail**: Create a graph with nodes `{1, 2, 3}` and edges `{(1, 2), (2, 3)}`. The test checks that the neighbor of node `1` is `2`. Then, a new edge `(1, 3)` is added, and the test checks that `3` is now a neighbor of `1`.
+
+- **DFS (Depth-First Search)**
+  - **Goal**: Check that the DFS algorithm correctly traverses the graph.
+  - **Detail**: Using the same graph as before, the test verifies that the DFS from node `1` returns the list of nodes `[1, 2, 3]`.
+
+- **BFS (Breadth-First Search)**
+  - **Goal**: Check that the BFS algorithm correctly traverses the graph.
+  - **Detail**: Using the same graph as before, the test verifies that the BFS from node `1` returns the list of nodes `[1, 2, 3]`.
+
+- **Dijkstra (on a weighted graph)**
+  - **Goal**: Check that Dijkstra's algorithm works correctly for weighted graphs.
+  - **Detail**: The graph is weighted, with the edge `(2, 3)` having a weight of `2.0`. The test verifies that Dijkstra from node `1` correctly calculates the shortest distances to all nodes.
+
+- **Floyd-Warshall (on a weighted graph)**
+  - **Goal**: Check that the Floyd-Warshall algorithm correctly calculates the distances between all nodes in a weighted graph.
+  - **Detail**: Using the same weighted graph, the test checks that Floyd-Warshall correctly calculates distances between all nodes, including infinite distances where there is no direct path.
+
+#### DirectedGraph
+
+- **Topological Sorting**
+  - **Goal**: Check that topological sorting works correctly for acyclic directed graphs.
+  - **Detail**: The directed graph has edges `{(1, 2), (2, 3)}`. The test checks that the topological sort returns the list `[1, 2, 3]`, which is a valid order for the nodes.
+
+- **Cycle Detection**
+  - **Goal**: Check that cycle detection works correctly for directed graphs with cycles.
+  - **Detail**: The graph contains a cycle with the edges `{(1, 2), (2, 3), (3, 1)}`. The test checks that the cycle is detected and that the message correctly indicates the cycle found.
