@@ -25,3 +25,64 @@ To run the application, you need to have `sbt` installed on your machine.
 3) Run `sbt run` to run the application
 4) Run `sbt test` to run the tests
 5) Go to the `app` module and launch `Main.scala` to run the application
+
+## Design Decisions
+
+We have chosen to create several classes to represent our graphs.
+
+### The Edge Class
+
+**Why**: To represent the edges between the vertices of the graph
+
+**How**:
+- **Attributes**:
+    - `from`: `Int` representing the vertex where the edge comes from
+    - `to`: `Int` representing the vertex where the edge goes
+    - `weight`: `Double` representing the weight of the edge, default value is `Double.NaN`
+- **Methods**:
+    - No methods
+
+### The Graph Class (Abstract)
+
+**Why**: To implement the common behaviors of the concrete graph classes
+
+**How**:
+- **Attributes**:
+    - `vertices`: `Set[Int]` to store the vertices of the graph
+    - `edges`: `Set[Edge]` to store the edges of the graph
+    - `weighted`: `Boolean` to indicate if the graph uses weights or not
+- **Methods**:
+    - `addEdge`: Add an edge to the graph
+    - `addEdges`: Add multiple edges to the graph
+    - `neighbors (abstract)`: Get the neighbors of a vertex
+    - `copyWith (abstract)`: Get the deep copy of the object
+    - `removeEdge`: Remove an edge from the graph
+    - `removeEdges`: Remove multiple edges from the graph
+    - `dfs`: Perform a Depth-First Search on the graph
+    - `bfs`: Perform a Breadth-First Search on the graph
+    - `floydWarshall`: Execute the Floyd-Warshall algorithm on the graph
+    - `dijkstra`: Execute Dijkstra's algorithm on the graph
+
+### The UndirectedGraph Class (Extends Graph)
+
+**Why**: To represent an undirected graph
+
+**How**:
+- **Attributes**:
+    - Same as the `Graph`, but overrides edges to ensure they are valid for an undirected graph
+- **Methods**:
+    - Implements `neighbors` and `copyWith` from `Graph`
+
+### The DirectedGraph Class (Extends Graph)
+
+**Why**: To represent a directed graph
+
+**How**:
+- **Attributes**:
+    - Same as the `Graph`, but ensures edges are valid for a directed graph
+- **Methods**:
+    - Implements `neighbors` and `copyWith` from `Graph`
+    - `topologicalSort`: Compute a topological sorting of the graph
+    - `detectCycle`: Detect if there are cycles in the graphneighbors and copyWith
+                topologicalSort: compute a topological sorting on the graph
+                detectCycle: detect is there are cycles or not in the graph
