@@ -236,8 +236,7 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
 }
 
 object Graph_manager {
-  @main
-  def main(): Unit = {
+  def main(args: Array[String]): Unit = {
     println("Hello world!")
     var undirectedUnweightedGraph = UndirectedGraph[Int](Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
     println("--- undirectedUnweightedGraph.neighbors(1): " + undirectedUnweightedGraph.neighbors(1))
