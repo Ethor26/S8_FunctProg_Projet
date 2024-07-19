@@ -48,3 +48,5 @@ build/
 .bloop/
 
 .metals/
+.metals/metals.log
+.metals/metals.mv.db
