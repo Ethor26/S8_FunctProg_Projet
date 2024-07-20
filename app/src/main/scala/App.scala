@@ -106,32 +106,54 @@ object Main extends ZIOAppDefault {
 
   def algorithmMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
     _ <- printLine("Algorithm Menu:")
+    _ <- printLine("1. Depth-First Search (DFS)")
+    _ <- printLine("2. Breadth-First Search (BFS)")
+    _ <- printLine("3. Floyd-Warshall Algorithm")
+    _ <- printLine("4. Djikstra's Algorithm")
     _ <- appState.graphType match {
       case GraphType.Directed =>
-        printLine("1. Depth-First Search (DFS)") *>
-          printLine("2. Breadth-First Search (BFS)") *>
-          printLine("3. Topological Sort") *>
-          printLine("4. Cycle Detection")
-      case _ =>
-        printLine("Graph algorithms are not available for this graph type.")
+          printLine("5. Topological Sort") *>
+          printLine("6. Cycle Detection") 
+      case _ => printLine("Other algorithms not available for undirected graphs.")
     }
     _ <- printLine("Q. Back to Main Menu")
 
     choice <- readLine
     _ <- choice match {
-      case "1" => appState.graphType match {
-        case GraphType.Directed => dfsMenu(appState)
-        case _ => printLine("DFS is not available for this graph type.") *> algorithmMenu(appState)
+      case "1" => dfsMenu(appState)
+      case "2" => bfsMenu(appState)
+      case "3" => floydWarshallMenu(appState)
+      case "4" => djikstraMenu(appState)
+      case "5" => appState.graphType match {
+        case GraphType.Directed => topologicalSortMenu(appState)
+        case _ => printLine("TopologicalSort is not available for this graph type.") *> algorithmMenu(appState)
       }
-      case "2" => appState.graphType match {
-        case GraphType.Directed => bfsMenu(appState)
-        case _ => printLine("BFS is not available for this graph type.") *> algorithmMenu(appState)
+      case "6" => appState.graphType match {
+        case GraphType.Directed => cycleDetectionMenu(appState)
+        case _ => printLine("CycleDetection is not available for this graph type.") *> algorithmMenu(appState)
       }
-      case "3" => topologicalSortMenu(appState)
-      case "4" => cycleDetectionMenu(appState)
       case "Q" => mainMenu(appState)
       case _ => printLine("Invalid choice. Please try again.") *> algorithmMenu(appState)
     }
+  } yield ()
+
+  // TODO: Fonctions suivantes à factoriser
+  def floydWarshallMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Enter the starting vertex:")
+    start <- readLine
+    graph <- appState.getGraph
+    result = graph.floydWarshall()
+    _ <- printLine(s"DFS result: $result")
+    _ <- algorithmMenu(appState)
+  } yield ()
+
+  def djikstraMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Enter the starting vertex:")
+    start <- readLine
+    graph <- appState.getGraph
+    result = graph.dijkstra(start)
+    _ <- printLine(s"DFS result: $result")
+    _ <- algorithmMenu(appState)
   } yield ()
 
   def dfsMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
