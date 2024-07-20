@@ -1,5 +1,4 @@
 // package S8_FunctProg_Projet.core
-
 import scala.sys.process.*
 import java.io.*
 

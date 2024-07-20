@@ -1,13 +1,16 @@
-// package S8_FunctProg_Projet.core
-
 import zio.json.*
+import zio.json.DeriveJsonCodec._
 import scala.collection.mutable
 
 // Define the Edge class
 case class Edge[V](from: V, to: V, weight: Double = Double.NaN)
 object Edge {
+  implicit def edgeCodec[V: JsonCodec]: JsonCodec[Edge[V]] = DeriveJsonCodec.gen[Edge[V]]
+  /*
   implicit def edgeEncoder[V: JsonEncoder]: JsonEncoder[Edge[V]] = DeriveJsonEncoder.gen[Edge[V]]
   implicit def edgeDecoder[V: JsonDecoder]: JsonDecoder[Edge[V]] = DeriveJsonDecoder.gen[Edge[V]]
+  */
+
 }
 
 // Define an abstract base class for graphs
@@ -158,10 +161,13 @@ case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]
     case Edge(`vertex`, v, _) => v
     case Edge(v, `vertex`, _) => v
   }
+}
 
+object UndirectedGraph {
   // JSON encoders and decoders for UndirectedGraph
-  implicit def undirectedGraphEncoder[J: JsonEncoder]: JsonEncoder[UndirectedGraph[J]] = DeriveJsonEncoder.gen[UndirectedGraph[J]]
-  implicit def undirectedGraphDecoder[J: JsonDecoder]: JsonDecoder[UndirectedGraph[J]] = DeriveJsonDecoder.gen[UndirectedGraph[J]]
+  implicit def undirectedGraphCodec[V: JsonCodec]: JsonCodec[UndirectedGraph[V]] = DeriveJsonCodec.gen[UndirectedGraph[V]]
+  // implicit def undirectedGraphEncoder[V: JsonEncoder]: JsonEncoder[UndirectedGraph[V]] = DeriveJsonEncoder.gen[UndirectedGraph[V]]
+  // implicit def undirectedGraphDecoder[V: JsonDecoder]: JsonDecoder[UndirectedGraph[V]] = DeriveJsonDecoder.gen[UndirectedGraph[V]]
 }
 
 // Implementation of a directed graph
@@ -242,11 +248,28 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
 
     result.map(_ => Nil) // Right("No cycles detected")
   }
-
-  // JSON encoders and decoders for DirectedGraph
-  implicit def directedGraphEncoder[J: JsonEncoder]: JsonEncoder[DirectedGraph[J]] = DeriveJsonEncoder.gen[DirectedGraph[J]]
-  implicit def directedGraphDecoder[J: JsonDecoder]: JsonDecoder[DirectedGraph[J]] = DeriveJsonDecoder.gen[DirectedGraph[J]]
 }
+
+object DirectedGraph {
+  // JSON encoders and decoders for DirectedGraph
+  implicit def directedGraphCodec[V: JsonCodec]: JsonCodec[DirectedGraph[V]] = DeriveJsonCodec.gen[DirectedGraph[V]]
+  /*
+  implicit def directedGraphEncoder[V: JsonEncoder]: JsonEncoder[DirectedGraph[V]] = DeriveJsonEncoder.gen[DirectedGraph[V]]
+  implicit def directedGraphDecoder[V: JsonDecoder]: JsonDecoder[DirectedGraph[V]] = DeriveJsonDecoder.gen[DirectedGraph[V]]
+  */
+}
+
+
+// Codec pour Graph utilisant un codec discriminé
+/*
+implicit def graphCodec[V: JsonCodec]: JsonCodec[Graph[V]] = {
+  val discriminatedCodec = JsonCodec[Graph[V]](
+    JsonCodec.discriminated[Graph[V]]
+      .subtype[DirectedGraph[V]]("DirectedGraph")
+      .subtype[UndirectedGraph[V]]("UndirectedGraph")
+  )
+  discriminatedCodec
+}*/
 
 object Graph_manager {
   def main(args: Array[String]): Unit = {
