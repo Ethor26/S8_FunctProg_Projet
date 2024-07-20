@@ -1,254 +1,245 @@
-import scalaproject.core.{DirectedGraph, Edge, Graph, UndirectedGraph}
-import zio.json._
+import zio.*
+import zio.Console.*
+import zio.json.*
 
-sealed trait GraphType
-case object Directed extends GraphType
-case object Undirected extends GraphType
+import java.io.*
 
-case class AppState(
-  graphType: Option[GraphType] = None,
-  graph: Option[Graph[String]] = None,
-  errorMessage: Option[String] = None
-)
+object Main extends ZIOAppDefault {
 
-object AppState {
-  implicit val graphTypeEncoder: JsonEncoder[GraphType] = DeriveJsonEncoder.gen[GraphType]
-  implicit val graphTypeDecoder: JsonDecoder[GraphType] = DeriveJsonDecoder.gen[GraphType]
-  implicit val appStateEncoder: JsonEncoder[AppState] = DeriveJsonEncoder.gen[AppState]
-  implicit val appStateDecoder: JsonDecoder[AppState] = DeriveJsonDecoder.gen[AppState]
+  def run: URIO[ZIOAppArgs & Scope, ExitCode] = program.exitCode
 
-  def initializeGraph(state: AppState, graphType: GraphType, weighted: Boolean): AppState = {
-    val graph = graphType match {
-      case Directed   => DirectedGraph[String](Set.empty, Set.empty, weighted)
-      case Undirected => UndirectedGraph[String](Set.empty, Set.empty, weighted)
+  val program: ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Welcome to the ZIO Graph Application!")
+    directedRef <- Ref.make(DirectedGraph(Set.empty[String], Set.empty, weighted = false))
+    undirectedRef <- Ref.make(UndirectedGraph(Set.empty[String], Set.empty, weighted = false))
+    _ <- selectMenu(AppState(directedRef, undirectedRef, GraphType.Directed))
+  } yield ()
+
+  def selectMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Select Graph Type:")
+    _ <- printLine("1. Directed Graph")
+    _ <- printLine("2. Undirected Graph")
+    _ <- printLine("Q. Exit")
+
+    choice <- readLine
+    _ <- choice match {
+      case "1" => mainMenu(appState.copy(graphType = GraphType.Directed))
+      case "2" => mainMenu(appState.copy(graphType = GraphType.Undirected))
+      case "Q" => printLine("Goodbye!") *> ZIO.succeed(())
+      case _ => printLine("Invalid choice. Please try again.") *> selectMenu(appState)
     }
-    state.copy(graphType = Some(graphType), graph = Some(graph))
-  }
+  } yield ()
 
-  def addVertex(state: AppState, vertex: String): AppState = {
-    state.graph match {
-      case Some(graph) =>
-        val newGraph = graph match {
-          case g: DirectedGraph[String]   => g.copy(initialVertices = g.vertices + vertex)
-          case g: UndirectedGraph[String] => g.copy(initialVertices = g.vertices + vertex)
-        }
-        state.copy(graph = Some(newGraph))
-      case None => state.copy(errorMessage = Some("Graph is not initialized."))
-    }
-  }
+  def mainMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Main Menu:")
+    _ <- printLine("1. Add Edge")
+    _ <- printLine("2. Remove Edge")
+    _ <- printLine("3. Display Graph")
+    _ <- printLine("4. Save Graph to JSON")
+    _ <- printLine("5. Load Graph from JSON")
+    _ <- printLine("6. Go to Algorithm Menu")
+    _ <- printLine("Q. Exit")
 
-  def removeVertex(state: AppState, vertex: String): AppState = {
-    state.graph match {
-      case Some(graph) =>
-        val newGraph = graph match {
-          case g: DirectedGraph[String]   => g.copy(initialVertices = g.vertices - vertex)
-          case g: UndirectedGraph[String] => g.copy(initialVertices = g.vertices - vertex)
-        }
-        state.copy(graph = Some(newGraph))
-      case None => state.copy(errorMessage = Some("Graph is not initialized."))
+    choice <- readLine
+    _ <- choice match {
+      case "1" => addEdgeMenu(appState)
+      case "2" => removeEdgeMenu(appState)
+      case "3" => displayGraph(appState)
+      case "4" => saveGraphToJson(appState)
+      case "5" => loadGraphFromJson(appState)
+      case "6" => algorithmMenu(appState)
+      case "Q" => printLine("Goodbye!") *> selectMenu(appState)
+      case _ => printLine("Invalid choice. Please try again.") *> mainMenu(appState)
     }
-  }
+  } yield ()
 
-  def addEdge(state: AppState, from: String, to: String, weight: Double = 1.0): AppState = {
-    state.graph match {
-      case Some(graph) =>
-        val edge = Edge(from, to, weight)
-        val newGraph = graph.addEdge(edge)
-        state.copy(graph = Some(newGraph))
-      case None => state.copy(errorMessage = Some("Graph is not initialized."))
-    }
-  }
+  def addEdgeMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Enter the source vertex:")
+    source <- readLine
+    _ <- printLine("Enter the destination vertex:")
+    destination <- readLine
+    _ <- appState.addEdge(Edge(source, destination))
+    _ <- printLine(s"Edge ($source, $destination) added.")
+    _ <- mainMenu(appState)
+  } yield ()
 
-  def removeEdge(state: AppState, from: String, to: String): AppState = {
-    state.graph match {
-      case Some(graph) =>
-        val edge = Edge(from, to)
-        val newGraph = graph.removeEdge(edge)
-        state.copy(graph = Some(newGraph))
-      case None => state.copy(errorMessage = Some("Graph is not initialized."))
-    }
-  }
+  def removeEdgeMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Enter the source vertex:")
+    source <- readLine
+    _ <- printLine("Enter the destination vertex:")
+    destination <- readLine
+    _ <- appState.removeEdge(Edge(source, destination))
+    _ <- printLine(s"Edge ($source, $destination) removed.")
+    _ <- mainMenu(appState)
+  } yield ()
 
-  def dfs(state: AppState, start: String): Either[String, List[String]] = {
-    state.graph match {
-      case Some(graph) => Right(graph.dfs(start))
-      case None => Left("Graph is not initialized.")
-    }
-  }
+  def displayGraph(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    graph <- appState.getGraph
+    grviz = GraphVisualizer.toGraphViz(graph)
+    _ <- printLine(grviz)
+    _ <- mainMenu(appState)
+  } yield ()
 
-  def bfs(state: AppState, start: String): Either[String, List[String]] = {
-    state.graph match {
-      case Some(graph) => Right(graph.bfs(start))
-      case None => Left("Graph is not initialized.")
-    }
-  }
+  def saveGraphToJson(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    graph <- appState.getGraph
+    encoder = appState.getJsonEncoder
+    json = graph.toJsonPretty(encoder)
+    // json = graph.toJsonPretty
+    _ <- printLine(s"Graph JSON: $json")
+    _ <- mainMenu(appState)
+  } yield ()
 
-  def dijkstra(state: AppState, start: String): Either[String, Map[String, Double]] = {
-    state.graph match {
-      case Some(graph) => graph.dijkstra(start)
-      case None => Left("Graph is not initialized.")
-    }
-  }
+  def loadGraphFromJson(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Enter the graph JSON:")
+    json <- readLine
+    _ <- appState.loadJson(json)
+    _ <- printLine("Graph loaded from JSON.")
+    _ <- mainMenu(appState)
+  } yield ()
 
-  def floydWarshall(state: AppState): Either[String, Map[(String, String), Double]] = {
-    state.graph match {
-      case Some(graph) => graph.floydWarshall()
-      case None => Left("Graph is not initialized.")
+  def algorithmMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Algorithm Menu:")
+    _ <- appState.graphType match {
+      case GraphType.Directed =>
+        printLine("1. Depth-First Search (DFS)") *>
+          printLine("2. Breadth-First Search (BFS)") *>
+          printLine("3. Topological Sort") *>
+          printLine("4. Cycle Detection")
+      case _ =>
+        printLine("Graph algorithms are not available for this graph type.")
     }
-  }
+    _ <- printLine("Q. Back to Main Menu")
 
-  def topologicalSort(state: AppState): Either[String, List[String]] = {
-    state.graph match {
-      case Some(graph: DirectedGraph[String]) => graph.topologicalSort
-      case Some(_) => Left("Topological sort is only applicable to directed graphs.")
-      case None => Left("Graph is not initialized.")
+    choice <- readLine
+    _ <- choice match {
+      case "1" => appState.graphType match {
+        case GraphType.Directed => dfsMenu(appState)
+        case _ => printLine("DFS is not available for this graph type.") *> algorithmMenu(appState)
+      }
+      case "2" => appState.graphType match {
+        case GraphType.Directed => bfsMenu(appState)
+        case _ => printLine("BFS is not available for this graph type.") *> algorithmMenu(appState)
+      }
+      case "3" => topologicalSortMenu(appState)
+      case "4" => cycleDetectionMenu(appState)
+      case "Q" => mainMenu(appState)
+      case _ => printLine("Invalid choice. Please try again.") *> algorithmMenu(appState)
     }
-  }
+  } yield ()
 
-  def detectCycle(state: AppState): Either[String, List[String]] = {
-    state.graph match {
-      case Some(graph: DirectedGraph[String]) => graph.detectCycle
-      case Some(_) => Left("Cycle detection is only applicable to directed graphs.")
-      case None => Left("Graph is not initialized.")
+  def dfsMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Enter the starting vertex:")
+    start <- readLine
+    graph <- appState.getGraph
+    result = graph.dfs(start)
+    _ <- printLine(s"DFS result: $result")
+    _ <- algorithmMenu(appState)
+  } yield ()
+
+  def bfsMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    _ <- printLine("Enter the starting vertex:")
+    start <- readLine
+    graph <- appState.getGraph
+    result = graph.bfs(start)
+    _ <- printLine(s"BFS result: $result")
+    _ <- algorithmMenu(appState)
+  } yield ()
+
+  def topologicalSortMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    graph <- appState.getGraph
+    result = graph match {
+      case dg: DirectedGraph[String] => dg.topologicalSort
+      case _ => Left("Topological sort is only applicable to directed graphs.")
     }
-  }
+    _ <- result match {
+      case Right(sorted) => printLine(s"Topological Sort result: $sorted")
+      case Left(error) => printLine(s"Error: $error")
+    }
+    _ <- algorithmMenu(appState)
+  } yield ()
+
+  def cycleDetectionMenu(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
+    graph <- appState.getGraph
+    result = graph match {
+      case dg: DirectedGraph[String] => dg.detectCycle
+      case _ => Left("Cycle detection is only applicable to directed graphs.")
+    }
+    _ <- result match {
+      case Right(_) => printLine("No cycles detected.")
+      case Left(error) => printLine(s"Error: $error")
+    }
+    _ <- algorithmMenu(appState)
+  } yield ()
 }
 
-object Main extends App {
-  var state = AppState()
+sealed trait GraphType
+object GraphType {
+  case object Directed extends GraphType
+  case object Undirected extends GraphType
+}
 
-  def displayState(): Unit = {
-    println(state.toJsonPretty)
+case class AppState(
+                     directedGraph: Ref[DirectedGraph[String]],
+                     undirectedGraph: Ref[UndirectedGraph[String]], 
+                     graphType: GraphType
+                   ) {
+
+  def getJsonEncoder: JsonEncoder[Graph[String]] = graphType match {
+    case GraphType.Directed => implicitly[JsonEncoder[DirectedGraph[String]]].asInstanceOf[JsonEncoder[Graph[String]]]
+    case GraphType.Undirected => implicitly[JsonEncoder[UndirectedGraph[String]]].asInstanceOf[JsonEncoder[Graph[String]]]
   }
 
-  def runApp(): Unit = {
-    var continue = true
-    while (continue) {
-      println("\nMenu:")
-      println("1. Initialize Graph")
-      println("2. Add Vertex")
-      println("3. Remove Vertex")
-      println("4. Add Edge")
-      println("5. Remove Edge")
-      println("6. DFS Traversal")
-      println("7. BFS Traversal")
-      println("8. Dijkstra's Algorithm")
-      println("9. Floyd-Warshall Algorithm")
-      println("10. Topological Sort")
-      println("11. Detect Cycle")
-      println("12. Display State")
-      println("13. Exit")
+  def getGraph: UIO[Graph[String]] = graphType match {
+    case GraphType.Directed => directedGraph.get
+    case GraphType.Undirected => undirectedGraph.get
+  }
 
-      print("\nEnter your choice: ")
-      val choice = scala.io.StdIn.readInt()
-
-      choice match {
-        case 1 =>
-          print("Enter Graph Type (1 for Directed, 2 for Undirected): ")
-          val gType = scala.io.StdIn.readInt() match {
-            case 1 => Directed
-            case 2 => Undirected
-          }
-          print("Is the graph weighted? (yes/no): ")
-          val weighted = scala.io.StdIn.readLine().trim.toLowerCase == "yes"
-          state = AppState.initializeGraph(state, gType, weighted)
-
-        case 2 =>
-          print("Enter Vertex: ")
-          val vertex = scala.io.StdIn.readLine()
-          state = AppState.addVertex(state, vertex)
-
-        case 3 =>
-          print("Enter Vertex: ")
-          val vertex = scala.io.StdIn.readLine()
-          state = AppState.removeVertex(state, vertex)
-
-        case 4 =>
-          print("Enter From Vertex: ")
-          val from = scala.io.StdIn.readLine()
-          print("Enter To Vertex: ")
-          val to = scala.io.StdIn.readLine()
-          if (state.graph.exists(_.weighted)) {
-            print("Enter Weight: ")
-            val weight = scala.io.StdIn.readDouble()
-            state = AppState.addEdge(state, from, to, weight)
-          } else {
-            state = AppState.addEdge(state, from, to)
-          }
-
-        case 5 =>
-          print("Enter From Vertex: ")
-          val from = scala.io.StdIn.readLine()
-          print("Enter To Vertex: ")
-          val to = scala.io.StdIn.readLine()
-          state = AppState.removeEdge(state, from, to)
-
-        case 6 =>
-          print("Enter Start Vertex: ")
-          val start = scala.io.StdIn.readLine()
-          AppState.dfs(state, start) match {
-            case Right(path) => println(s"DFS Path: ${path.mkString(" -> ")}")
-            case Left(error) => println(s"Error: $error")
-          }
-
-        case 7 =>
-          print("Enter Start Vertex: ")
-          val start = scala.io.StdIn.readLine()
-          AppState.bfs(state, start) match {
-            case Right(path) => println(s"BFS Path: ${path.mkString(" -> ")}")
-            case Left(error) => println(s"Error: $error")
-          }
-
-        case 8 =>
-          print("Enter Start Vertex: ")
-          val start = scala.io.StdIn.readLine()
-          AppState.dijkstra(state, start) match {
-            case Right(distances) =>
-              println("Dijkstra's Algorithm Result:")
-              distances.foreach { case (vertex, distance) =>
-                println(s"Vertex: $vertex, Distance: $distance")
-              }
-            case Left(error) => println(s"Error: $error")
-          }
-
-        case 9 =>
-          AppState.floydWarshall(state) match {
-            case Right(distances) =>
-              println("Floyd-Warshall Algorithm Result:")
-              distances.foreach { case ((from, to), distance) =>
-                println(s"From: $from, To: $to, Distance: $distance")
-              }
-            case Left(error) => println(s"Error: $error")
-          }
-
-        case 10 =>
-          AppState.topologicalSort(state) match {
-            case Right(sorted) => println(s"Topologically Sorted Order: ${sorted.mkString(" -> ")}")
-            case Left(error) => println(s"Error: $error")
-          }
-
-        case 11 =>
-          AppState.detectCycle(state) match {
-            case Right(cycle) =>
-              if (cycle.isEmpty) println("No cycle detected.")
-              else println(s"Detected Cycle: ${cycle.mkString(" -> ")}")
-            case Left(error) => println(s"Error: $error")
-          }
-
-        case 12 =>
-          displayState()
-
-        case 13 =>
-          println("Exiting...")
-          continue = false
-
-        case _ =>
-          println("Invalid choice, please try again.")
-      }
+  def addEdge(edge: Edge[String]): ZIO[Any, String, Unit] = {
+    graphType match {
+      case GraphType.Directed =>
+        directedGraph.update(g => g.addEdge(edge).asInstanceOf).unit
+      case GraphType.Undirected =>
+        undirectedGraph.update(_.addEdge(edge).asInstanceOf).unit
     }
   }
 
-  def main(args: Array[String]): Unit = {
-    runApp()
+  def removeEdge(edge: Edge[String]): ZIO[Any, String, Unit] = {
+    graphType match {
+      case GraphType.Directed =>
+        directedGraph.update(_.removeEdge(edge).asInstanceOf).unit
+      case GraphType.Undirected =>
+        undirectedGraph.update(_.removeEdge(edge).asInstanceOf).unit
+    }
+  }
+
+  def toJson: UIO[String] = { // ZIO[Any, String, String] = {
+    graphType match {
+      case GraphType.Directed =>
+        directedGraph.get.map(_.toJsonPretty) // graph => graph.toJsonPretty
+      case GraphType.Undirected =>
+        undirectedGraph.get.map(_.toJsonPretty)
+    }
+  }
+
+  def fromJson(json: String): ZIO[Any, String, Unit] = {
+    graphType match {
+      case GraphType.Directed =>
+        ZIO
+          .fromEither(json.fromJson[DirectedGraph[String]])
+          .flatMap(graph => directedGraph.set(graph))
+      case GraphType.Undirected =>
+        ZIO
+          .fromEither(json.fromJson[UndirectedGraph[String]])
+          .flatMap(graph => undirectedGraph.set(graph))
+    }
+  }
+
+  def saveGraphToJson: UIO[String] = toJson // getGraph.flatMap(graph => ZIO.succeed(graph.toJsonPretty)) // getGraph.map(_.toJsonPretty)
+
+  def loadJson(json: String): IO[String, Unit] = graphType match {
+    case GraphType.Directed =>
+      ZIO.fromEither(json.fromJson[DirectedGraph[String]]).flatMap(directedGraph.set).mapError(_.toString)
+    case GraphType.Undirected =>
+      ZIO.fromEither(json.fromJson[UndirectedGraph[String]]).flatMap(undirectedGraph.set).mapError(_.toString)
   }
 }

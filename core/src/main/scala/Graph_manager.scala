@@ -1,14 +1,16 @@
-package scalaproject.core
-
-import zio.json._
+import zio.json.*
+import zio.json.DeriveJsonCodec._
 import scala.collection.mutable
 
 // Define the Edge class
-case class Edge[V](from: V, to: V, weight: Double = 0.0)
-
+case class Edge[V](from: V, to: V, weight: Double = Double.NaN)
 object Edge {
+  implicit def edgeCodec[V: JsonCodec]: JsonCodec[Edge[V]] = DeriveJsonCodec.gen[Edge[V]]
+  /*
   implicit def edgeEncoder[V: JsonEncoder]: JsonEncoder[Edge[V]] = DeriveJsonEncoder.gen[Edge[V]]
   implicit def edgeDecoder[V: JsonDecoder]: JsonDecoder[Edge[V]] = DeriveJsonDecoder.gen[Edge[V]]
+  */
+
 }
 
 // Define an abstract base class for graphs
@@ -119,6 +121,7 @@ abstract class Graph[V](val weighted: Boolean) {
     Right(dist.toMap)
   }
 
+
   // Dijkstra's Algorithm
   def dijkstra(start: V): Either[String, Map[V, Double]] = {
     if (!weighted) return Left("Dijkstra's algorithm is only applicable to weighted graphs.")
@@ -145,12 +148,12 @@ abstract class Graph[V](val weighted: Boolean) {
   }
 }
 
-// Implementation of an undirected graph
+// Implémentation d'un graphe non directionnel
 case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
   override val vertices: Set[V] = initialVertices
   override val edges: Set[Edge[V]] = validateEdges(initialEdges)
 
-  override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): Graph[V] = {
+  override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): UndirectedGraph[V] = {
     UndirectedGraph(vertices, edges, weighted)
   }
 
@@ -158,10 +161,13 @@ case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]
     case Edge(`vertex`, v, _) => v
     case Edge(v, `vertex`, _) => v
   }
+}
 
+object UndirectedGraph {
   // JSON encoders and decoders for UndirectedGraph
-  implicit def undirectedGraphEncoder[V: JsonEncoder]: JsonEncoder[UndirectedGraph[V]] = DeriveJsonEncoder.gen[UndirectedGraph[V]]
-  implicit def undirectedGraphDecoder[V: JsonDecoder]: JsonDecoder[UndirectedGraph[V]] = DeriveJsonDecoder.gen[UndirectedGraph[V]]
+  implicit def undirectedGraphCodec[V: JsonCodec]: JsonCodec[UndirectedGraph[V]] = DeriveJsonCodec.gen[UndirectedGraph[V]]
+  // implicit def undirectedGraphEncoder[V: JsonEncoder]: JsonEncoder[UndirectedGraph[V]] = DeriveJsonEncoder.gen[UndirectedGraph[V]]
+  // implicit def undirectedGraphDecoder[V: JsonDecoder]: JsonDecoder[UndirectedGraph[V]] = DeriveJsonDecoder.gen[UndirectedGraph[V]]
 }
 
 // Implementation of a directed graph
@@ -169,7 +175,7 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
   override val vertices: Set[V] = initialVertices
   override val edges: Set[Edge[V]] = validateEdges(initialEdges)
 
-  override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): Graph[V] = {
+  override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): DirectedGraph[V] = {
     DirectedGraph(vertices, edges, weighted)
   }
 
@@ -242,8 +248,45 @@ case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]],
 
     result.map(_ => Nil) // Right("No cycles detected")
   }
+}
 
+object DirectedGraph {
   // JSON encoders and decoders for DirectedGraph
+  implicit def directedGraphCodec[V: JsonCodec]: JsonCodec[DirectedGraph[V]] = DeriveJsonCodec.gen[DirectedGraph[V]]
+  /*
   implicit def directedGraphEncoder[V: JsonEncoder]: JsonEncoder[DirectedGraph[V]] = DeriveJsonEncoder.gen[DirectedGraph[V]]
   implicit def directedGraphDecoder[V: JsonDecoder]: JsonDecoder[DirectedGraph[V]] = DeriveJsonDecoder.gen[DirectedGraph[V]]
+  */
+}
+
+
+// Codec pour Graph utilisant un codec discriminé
+/*
+implicit def graphCodec[V: JsonCodec]: JsonCodec[Graph[V]] = {
+  val discriminatedCodec = JsonCodec[Graph[V]](
+    JsonCodec.discriminated[Graph[V]]
+      .subtype[DirectedGraph[V]]("DirectedGraph")
+      .subtype[UndirectedGraph[V]]("UndirectedGraph")
+  )
+  discriminatedCodec
+}*/
+
+object Graph_manager {
+  def main(args: Array[String]): Unit = {
+    println("Hello world!")
+    var undirectedUnweightedGraph = UndirectedGraph[Int](Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
+    println("--- undirectedUnweightedGraph.neighbors(1): " + undirectedUnweightedGraph.neighbors(1))
+    undirectedUnweightedGraph = undirectedUnweightedGraph.addEdge(Edge(1, 3)).asInstanceOf[UndirectedGraph[Int]]
+    println("--- undirectedUnweightedGraph.neighbors(1) + Edge(1, 3): " + undirectedUnweightedGraph.neighbors(1))
+    val weightedGraph = UndirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3, 2.0)), weighted = true)
+    println("--- weightedGraph.dijkstra(1): " + weightedGraph.dijkstra(1))
+
+    // Tests des algorithmes
+    println("--- undirectedUnweightedGraph.dfs(1): " + undirectedUnweightedGraph.dfs(1))
+    println("--- undirectedUnweightedGraph.bfs(1): " + undirectedUnweightedGraph.bfs(1))
+    val directedGraph = DirectedGraph(Set(1, 2, 3), Set(Edge(1, 2), Edge(2, 3)), weighted = false)
+    println("--- directedGraph.topologicalSort: " + directedGraph.topologicalSort)
+    println("--- directedGraph.detectCycle: " + directedGraph.detectCycle)
+    println("--- weightedGraph.floydWarshall(): " + weightedGraph.floydWarshall())
+  }
 }
