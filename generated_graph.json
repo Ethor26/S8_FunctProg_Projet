@@ -1,9 +1,6 @@
 {
-  "initialVertices" : [
-    "1",
-    "2"
-  ],
-  "initialEdges" : [
+  "vertices" : [],
+  "edges" : [
     {
       "from" : "1",
       "to" : "2",

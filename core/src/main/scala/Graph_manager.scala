@@ -149,9 +149,9 @@ abstract class Graph[V](val weighted: Boolean) {
 }
 
 // Implémentation d'un graphe non directionnel
-case class UndirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
-  override val vertices: Set[V] = initialVertices
-  override val edges: Set[Edge[V]] = validateEdges(initialEdges)
+case class UndirectedGraph[V](override val vertices: Set[V], var edges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
+  // override val edges: Set[Edge[V]] = validateEdges(initialEdges) // initialEdges
+  edges = validateEdges(edges)
 
   override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): UndirectedGraph[V] = {
     UndirectedGraph(vertices, edges, weighted)
@@ -171,9 +171,9 @@ object UndirectedGraph {
 }
 
 // Implementation of a directed graph
-case class DirectedGraph[V](initialVertices: Set[V], initialEdges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
-  override val vertices: Set[V] = initialVertices
-  override val edges: Set[Edge[V]] = validateEdges(initialEdges)
+case class DirectedGraph[V](override val vertices: Set[V], var edges: Set[Edge[V]], override val weighted: Boolean) extends Graph[V](weighted) {
+  // override val edges: Set[Edge[V]] = validateEdges(initialEdges) // initialEdges
+  edges = validateEdges(edges)
 
   override protected def copyWith(edges: Set[Edge[V]], vertices: Set[V]): DirectedGraph[V] = {
     DirectedGraph(vertices, edges, weighted)
