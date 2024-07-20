@@ -1,0 +1,14 @@
+{
+  "initialVertices" : [
+    "1",
+    "2"
+  ],
+  "initialEdges" : [
+    {
+      "from" : "1",
+      "to" : "2",
+      "weight" : "NaN"
+    }
+  ],
+  "weighted" : false
+}

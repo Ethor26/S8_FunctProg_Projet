@@ -3,6 +3,7 @@ import zio.Console.*
 import zio.json.*
 
 import java.io.*
+import java.nio.file.{Files, Paths}
 
 object Main extends ZIOAppDefault {
 
@@ -80,11 +81,17 @@ object Main extends ZIOAppDefault {
     _ <- mainMenu(appState)
   } yield ()
 
+  def create_json_file(json: String): String = {
+    val path = Paths.get("generated_graph.json")
+    print(s"Writing JSON to file: $path...")
+    Files.write(path, json.getBytes)
+    json
+  }
+
   def saveGraphToJson(appState: AppState): ZIO[Any, String | IOException, Unit] = for {
     graph <- appState.getGraph
     encoder = appState.getJsonEncoder
-    json = graph.toJsonPretty(encoder)
-    // json = graph.toJsonPretty
+    json = create_json_file(graph.toJsonPretty(encoder))
     _ <- printLine(s"Graph JSON: $json")
     _ <- mainMenu(appState)
   } yield ()
@@ -241,5 +248,6 @@ case class AppState(
       ZIO.fromEither(json.fromJson[DirectedGraph[String]]).flatMap(directedGraph.set).mapError(_.toString)
     case GraphType.Undirected =>
       ZIO.fromEither(json.fromJson[UndirectedGraph[String]]).flatMap(undirectedGraph.set).mapError(_.toString)
+    case _ => ZIO.fail("Invalid graph type.")
   }
 }
