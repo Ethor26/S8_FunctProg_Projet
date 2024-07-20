@@ -22,9 +22,10 @@ The application has the files:
 To run the application, you need to have `sbt` installed on your machine.
 1) Clone the repository
 2) Go to the root of the project
-3) Run `sbt run` to run the application
-4) Run `sbt test` to run the tests
-5) Go to the `app` module and launch `Main.scala` to run the application
+3) Choose what Run:
+   - `sbt runApp` to run the application
+   - `sbt test` to run the tests of the core module
+   - `sbt runCore` to run the core module
 
 ## Design Decisions
 
@@ -131,9 +132,10 @@ We have chosen to create several classes to represent our graphs.
   - **Detail**: The graph contains a cycle with the edges `{(1, 2), (2, 3), (3, 1)}`. The test checks that the cycle is detected and that the message correctly indicates the cycle found.
 
 ## Usage Examples
-In the application, you can do sereval actions such as:
+In the application, you can do sereval actions:
 
-- ### create a new graph, then:
+- ### create a new graph: choose the type of graph you want to create
+- ### Perform operations on the graph:
   - Add an edge
   - Remove an edge
   - Display the graph

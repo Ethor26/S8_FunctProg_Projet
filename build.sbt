@@ -5,7 +5,8 @@ lazy val root = (project in file("."))
   .aggregate(core, app)
   .settings(
     name := "S8_FunctProg_Projet",
-    addCommandAlias("run", "app/run")
+    addCommandAlias("runCore", "core/run"),
+    addCommandAlias("runApp", "app/run")
   )
 
 lazy val core = (project in file("core"))
